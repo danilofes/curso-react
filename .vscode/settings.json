@@ -1,6 +1,7 @@
 {
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "prettier.printWidth": 140,
-    "editor.formatOnSave": true
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.printWidth": 110,
+  "editor.formatOnSave": true,
+  "cSpell.language": "en,pt-BR"
 }

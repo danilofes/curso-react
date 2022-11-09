@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meu primeiro componente React</title>
+    <!-- Devemos importar as bibliotecas react e react-dom -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  </head>
+  <body>
+    <!-- Este é o elemento onde exibiremos o componente -->
+    <div id="root"></div>
+    <script>
+      // Este é um componente React
+      function Componente1() {
+        return React.createElement("ul", null, [
+          React.createElement("li", null, "Item 1"),
+          React.createElement("li", null, ["Item 2 com ", React.createElement("strong", null, "texto destacado")]),
+        ]);
+      }
+
+      // Devemos renderizar nosso componente
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(React.createElement(Componente1));
+    </script>
+  </body>
+</html>
