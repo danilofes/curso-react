@@ -1,8 +1,9 @@
-## Conceitos básicos de React
-
 React é uma biblioteca JavaScript que nos ajuda a construir a interfaces gráficas de aplicações web.
 
-### Usando React diretamente no browser
+Existem basicamente duas maneiras de utilizar React: utilizá-lo diretamente em um script no navegador ou criar um projeto React, utilizando um conjunto de ferramentas de desenvolvimento.
+Nas seções seguintes vamos descrever estas duas formas.
+
+### Usando React diretamente no navegador
 
 A maneira mais simples de adicionar React em uma aplicação web é adicionar os scripts do React diretamente em um documento HTML.
 
@@ -69,7 +70,7 @@ Agora assim, teremos como resultado uma página com a mensagem "Hello world!".
 
 ### Criando um projeto com create-react-app
 
-Embora possamos desenvolver em React da maneira descrita na seção anterior, essa não é forma mais conveniente de utilizá-lo.
+Embora possamos desenvolver em React da maneira descrita na seção anterior, essa não é a forma recomendada de utilizá-lo.
 Usar `React.createElement` para construir interfaces mais complexas torna o código muito verboso.
 Por exemplo, suponha que queiramos gerar o seguinte HTML:
 
@@ -110,7 +111,7 @@ function Componente() {
 O problema é que agora tal código não é mais JavaScript puro e, portanto, não pode ser executado diretamente no navegador.
 Devemos usar primeiro uma ferramenta que transforma JSX em JavaScript.
 
-Podemos criar um projeto já configurado com todas as ferramentas para trabalhar com React por meio do comando.
+Podemos criar um projeto React, já configurado com todas as ferramentas que precisamos, por meio do comando.
 
 ```
 npx create-react-app nome-da-app
@@ -131,11 +132,9 @@ package.json
 Em `src/App.js` encontramos o componente principal da nossa aplicação e em `src/index.js` , tal componente é renderizado no elemento com id `root` que é definido em `public/index.html`.
 
 ::: info
-**Nota:** Ao usar o `create-react-app`, ele usará sempre a versão mais nova disponível do React.
-Este curso foi preparado usando a versão 18.2.0.
-Como futuras versões podem introduzir quebras de compatibilidade, é impossível garantir que todos os exemplos continuem funcionando.
-Por isso disponibilizamos no curso um arquivo ZIP com um projeto base com as versões fixadas.
-Assim podemos criar um projeto com as versões exatas das bibliotecas usadas para produzir o curso.
+**Nota:** Ao usar o `create-react-app`, ele usará sempre a versão mais recente do React e das ferramentas associadas.
+Por isso, disponibilizamos no curso um arquivo ZIP com um projeto base com a versão fixa (18.2.0).
+Recomendamos que você use tal projeto base como ponto de partida dos exercícios para evitar surpresas, pois futuras versões do React podem introduzir quebras de compatibilidade do código fonte.
 :::
 
 ### Construindo o projeto React
@@ -157,11 +156,6 @@ static/
 index.html
 ```
 
-::: info
-**Nota:** Todo o ferramental de construção do projeto executa no Node.js.
-Além disso, os comandos `npx` e `npm` são instalados juntos com o Node.js, daí a necessidade de instalar tal ferramenta.
-:::
-
 Estes são os arquivos estáticos HTML, JavaScript e CSS gerados a partir do código fonte.
 Eles podem ser disponibilizados em um servidor web e carregados no browser.
 A construção do projeto realiza uma série tarefas, entre elas:
@@ -174,7 +168,8 @@ A construção do projeto realiza uma série tarefas, entre elas:
 - Monta o `index.html` final, referenciando os arquivos JavaScript e CSS construídos.
 
 ::: info
-**Nota:** O `create-react-app` internamente utiliza ferramentas como [ESLint](https://eslint.org/), [Babel](https://babeljs.io/) e [Webpack](https://webpack.js.org/) para realizar estas tarefas.
+**Nota:** Todo o ferramental de criação e construção do projeto executa no Node.js, daí a necessidade de instalá-lo.
+O `create-react-app` internamente utiliza ferramentas como [ESLint](https://eslint.org/), [Babel](https://babeljs.io/) e [Webpack](https://webpack.js.org/) para realizar estas tarefas.
 É possível configurar estas e outras ferramentas manualmente para trabalhar com React de forma mais livre, usando a estrutura de projeto e etapas de construção desejadas, sem depender do `create-react-app`.
 No entanto, isto está fora do escopo deste curso.
 :::
@@ -193,6 +188,6 @@ npm start
 iniciamos o servidor de desenvolvimento. Ele iniciará um servidor web que serve nossa aplicação em <http://localhost:3000/> e abrirá uma janela do navegador.
 Além disso, qualquer alteração no código fonte dispara um processo de reconstrução e automaticamente recarrega a página.
 
-### Criando o projeto com TypeScript
+### Utilizando React com TypeScript
 
 Consulte a [documentação oficial do TypeScript](https://www.typescriptlang.org/docs/) para mais informações.

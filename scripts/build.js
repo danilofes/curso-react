@@ -57,7 +57,7 @@ async function run() {
   for (const file of files) {
     console.log(`Generationg HTML for ${file}`);
     const input = fs.readFileSync(baseDir + file, "utf-8");
-    const output = "\n" + md.render(input) + "\n";
+    const output = "\n" + `<h2>${file}</h2>\n` + md.render(input) + "\n";
     fs.appendFileSync("index.html", output);
   }
 

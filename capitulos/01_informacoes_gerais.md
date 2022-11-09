@@ -1,5 +1,3 @@
-## Introdução
-
 Neste curso aprenderemos a usar a tecnologia React.
 Para aproveitar o curso ao máximo, é importante acompanhar as lições codificando junto com as explicações do professor.
 Portanto, garanta que você possua as seguintes ferramentas de desenvolvimento instaladas:
