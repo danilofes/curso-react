@@ -131,12 +131,6 @@ package.json
 
 Em `src/App.js` encontramos o componente principal da nossa aplicação e em `src/index.js` , tal componente é renderizado no elemento com id `root` que é definido em `public/index.html`.
 
-::: info
-**Nota:** Ao usar o `create-react-app`, ele usará sempre a versão mais recente do React e das ferramentas associadas.
-Por isso, disponibilizamos no curso um arquivo ZIP com um projeto base com a versão fixa (18.2.0).
-Recomendamos que você use tal projeto base como ponto de partida dos exercícios para evitar surpresas, pois futuras versões do React podem introduzir quebras de compatibilidade do código fonte.
-:::
-
 ### Construindo o projeto React
 
 Para construir o projeto React, executamos os comandos.
@@ -190,4 +184,28 @@ Além disso, qualquer alteração no código fonte dispara um processo de recons
 
 ### Utilizando React com TypeScript
 
-Consulte a [documentação oficial do TypeScript](https://www.typescriptlang.org/docs/) para mais informações.
+TypeScript é uma extensão da linguagem JavaScript que adiciona um sistema de verificação de tipos em tempo de compilação.
+Ou seja, em JavaScript, erros de tipo ocorrem durante a execução caso não sejam devidamente tratados, em TypeScript, erros de tipos já são encontrados no momento da compilação.
+Com isso, o desenvolvimento se torna menos propenso a erros, trazendo maior facilidade de manutenção, especialmente porque a IDE Visual Studio Code fornece suporte excelente à linguagem.
+
+O `create-react-app` possui suporte oficial ao uso de TypeScript para a codificação da aplicação, basta criarmos o projeto com o comando:
+
+```
+npx create-react-app nome-da-app --template typescript
+```
+
+Neste caso, todo o código fonte gerado no projeto terá a extensão `.tsx` e a construção do projeto já estará preparada para transformar TypeScript e JSX em JavaScript.
+
+Ao longo de todo este curso usaremos TypeScript como linguagem de programação.
+Não usaremos recursos avançados, mas é preciso ter conhecimento básico desta linguagem.
+Como neste curso não ensinaremos TypeScript, sugerimos consultar a documentação oficial.
+Deve ser suficiente ler o [Tutorial de introdução](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html).
+Para conhecer mais profundamente os recursos, você pode ler o [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html).
+
+Daqui em diante, sempre que mostrarmos exemplos de código em React, assuma que estamos utilizando uma aplicação conforme criada pelo `create-react-app`, usando TypeScript.
+
+::: info
+**Nota:** Ao usar o `create-react-app`, ele usará sempre a versão mais recente do React e das ferramentas associadas.
+Por isso, disponibilizamos no curso um arquivo ZIP com um projeto base com versões fixas (React 18.2.0).
+Recomendamos que você use tal projeto base como ponto de partida dos exercícios para evitar surpresas, pois futuras versões do React (ou das ferramentas associadas) podem introduzir quebras de compatibilidade do código fonte.
+:::
