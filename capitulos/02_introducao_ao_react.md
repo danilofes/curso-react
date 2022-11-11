@@ -31,10 +31,10 @@ Feito isso, podemos definir nosso primeiro componente React.
 ```
 
 Um componente React é definido por meio de uma função JavaScript.
-Tal função deve retornar um _React Node_.
+Tal função deve retornar um _React Element_, uma estrutura de dados que representa uma subárvore de elementos HTML que serão exibidos na interface.
 Neste caso, estamos retornando um elemento `div`, cujo conteúdo é "Hello world!".
-Ou seja, quando tal elemento for exibido na interface, espera-se que ele corresponda ao HTML `<div>Hello world!</div>`.
-De forma geral, podemos dizer objetivo do React é nos ajudar a criar (au atualizar) elementos na página dinamicamente, via JavaScript.
+Ou seja, quando tal componente for exibido na interface, espera-se que ele corresponda ao HTML `<div>Hello world!</div>`.
+De forma geral, podemos dizer objetivo do React é nos ajudar a criar (ou atualizar) elementos na página dinamicamente, via JavaScript.
 
 No entanto, o código acima não exibe conteúdo algum na página, pois não renderizamos o componente.
 Para isso, devemos criar um nó raiz usando a função `ReactDOM.createRoot` e chamar sua função `render`.
@@ -68,9 +68,7 @@ O exemplo completo ficaria assim.
 
 Agora assim, teremos como resultado uma página com a mensagem "Hello world!".
 
-### Criando um projeto com create-react-app
-
-Embora possamos desenvolver em React da maneira descrita na seção anterior, essa não é a forma recomendada de utilizá-lo.
+Embora possamos desenvolver em React desta maneira, essa não é a forma recomendada de utilizá-lo.
 Usar `React.createElement` para construir interfaces mais complexas torna o código muito verboso.
 Por exemplo, suponha que queiramos gerar o seguinte HTML:
 
@@ -91,6 +89,8 @@ function Componente() {
   ]);
 }
 ```
+
+### Criando um projeto com create-react-app
 
 Para tornar o código mais fácil de trabalhar, o time do React criou uma extensão da linguagem JavaScript chamada de JSX, na qual usamos uma sintaxe similar a HTML para criar elementos React.
 Usando tal recurso, o código fica bem mais conciso:
@@ -158,7 +158,7 @@ A construção do projeto realiza uma série tarefas, entre elas:
 - Transforma a sintaxe JSX em JavaScript puro;
 - Transforma alguns recursos de JavaScript em código JavaScript tradicional (ES5) para obter maior compatibilidade com navegadores antigos;
 - Concatena todo o código JavaScript em um arquivo único (este processo é conhecido como _bundling_);
-- Também concatena todo o código CSS em um arquivo único;
+- Também concatena todo o código CSS em um arquivo único (é possível importar arquivos CSS no código fonte);
 - Monta o `index.html` final, referenciando os arquivos JavaScript e CSS construídos.
 
 ::: info
@@ -202,7 +202,7 @@ Como neste curso não ensinaremos TypeScript, sugerimos consultar a documentaç�
 Deve ser suficiente ler o [Tutorial de introdução](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html).
 Para conhecer mais profundamente os recursos, você pode ler o [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html).
 
-Daqui em diante, sempre que mostrarmos exemplos de código em React, assuma que estamos utilizando uma aplicação conforme criada pelo `create-react-app`, usando TypeScript.
+Daqui em diante, sempre que mostrarmos exemplos de código em React, assuma que estamos utilizando uma aplicação conforme criada pelo `create-react-app`, usando TypeScript e JSX.
 
 ::: info
 **Nota:** Ao usar o `create-react-app`, ele usará sempre a versão mais recente do React e das ferramentas associadas.
