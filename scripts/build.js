@@ -14,7 +14,7 @@ const template = {
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <title>Teste Markdown</title>
+  <title>Curso React - Versão HTML</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>

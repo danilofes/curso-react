@@ -50,6 +50,113 @@ Como `class` é uma palavra-chave reservada em JavaScript, o JSX usa `className`
 Outra exceção é o atributo `for`, que deve ser escrito como `htmlFor` em JSX.
 :::
 
-### Exibição condicional
+### Exibição condicional de elementos
 
-Como componentes são funções, podemos usar estruturas de controle convencionais como `if` ou `switch` para exibir elementos condicionalmente.
+Componentes frequentemente precisam exibir conteúdo diferente em diferentes condições.
+Como componentes são funções, podemos usar estruturas de controle convencionais como `if`, `switch` ou o operador ternário (`? :`) para exibir elementos condicionalmente.
+
+Considere o componente a seguir, que exibe um cartão com título e uma descrição opcional.
+
+```tsx
+function Card(props: { title: string; description?: string }) {
+  if (props.description) {
+    return (
+      <div>
+        <h3>{props.title}</h3>
+        <div>{props.description}</div>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <h3>{props.title}</h3>
+      </div>
+    );
+  }
+}
+```
+
+Nó podemos reescrever este código de forma mais concisa com o operador ternário.
+
+```tsx
+function Card(props: { title: string; description?: string }) {
+  return (
+    <div>
+      <h3>{props.title}</h3>
+      {props.description ? <div>{props.description}</div> : null}
+    </div>
+  );
+}
+```
+
+No exemplo acima usamos uma expressão ternária que retorna um `div` com a descrição quando `props.description` é _truthy_ e retorna `null` caso contrário.
+Neste caso nos beneficiando do fato que ao inserir `null` no JSX nada é exibido.
+Mais especificamente, tanto `null` quanto string vazia, `false` ou `undefined` exibem nada.
+Usando este conhecimento, é possível encurtar ainda mais o código com o operador `&&`.
+
+```tsx
+<div>
+  <h3>{props.title}</h3>
+  {props.description && <div>{props.description}</div>}
+</div>
+```
+
+Este código funciona pois o operador `&&` retorna o primeiro operando caso ele seja _falsy_ e o segundo operando caso o primeiro seja _truthy_. Assim, tal expressão retornará o elemento `div` caso `props.description` esteja definido e `undefined` caso contrário. Este tipo de uso do operador `&&` é muito comum em JSX.
+
+### Repetição de elementos
+
+Podemos inserir um _array_ de _React Elements_ no JSX por meio da sintaxe de chaves.
+Com isso é possível, por exemplo, usar `for` para gerar elementos dinamicamente.
+O componente abaixo exibe uma lista com 10 itens.
+
+```tsx
+function Repeticao() {
+  let listItems = [];
+  for (let i = 0; i < 10; i++) {
+    listItems.push(<li>Item {i + 1}</li>);
+  }
+  return <ul>{listItems}</ul>;
+}
+```
+
+É bastante comum gerarmos elementos JSX a partir de itens de um _array_.
+Portanto, é muito comum usarmos a função `map` para transformar um array de objetos em um array de elementos JSX.
+O componente `TodoList` a seguir exemplifica este cenário, ele recebe via _props_ uma lista de tarefas e as exibe como saída.
+
+```tsx
+interface TodoItem {
+  id: number;
+  description: string;
+  done: boolean;
+}
+
+function TodoList(props: { tasks: TodoItem[] }) {
+  return (
+    <ul>
+      {props.tasks.map((task) => (
+        <li>{task.description}</li>
+      ))}
+    </ul>
+  );
+}
+```
+
+#### A propriedade key
+
+Se exibirmos os dois exemplos de repetição anteriores no navegador iremos notar a seguinte mensagem no console:
+
+```
+Warning: Each child in a list should have a unique "key" prop.
+```
+
+O React está nos alertando que, quando exibimos um _array_ de elementos JSX, devemos atribuir a cada elemento do _array_ um valor distinto para a propriedade `key`.
+A propriedade `key` é usada internamente pelo React para atualizar o DOM de forma mais eficiente.
+Portanto, o correto seria modificar o componente `TodoList` para sanar o problema:
+
+```tsx
+<ul>
+  {props.tasks.map((task) => (
+    <li key={task.id}>{task.description}</li>
+  ))}
+</ul>
+```
