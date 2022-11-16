@@ -76,6 +76,7 @@ function Card(props: { title: string; description?: string }) {
 }
 ```
 
+Neste componente testamos se existe valor em `props.description` e, por meio de um `if/else` exibimos o JSX correspondente.
 Nó podemos reescrever este código de forma mais concisa com o operador ternário.
 
 ```tsx
@@ -183,3 +184,32 @@ Ademais, o valor da propriedade deve ser uma função, que recebe como parâmetr
 No código acima usamos o tipo `React.MouseEvent` para anotar o parâmetro `evt` do handler do evento.
 O React usa eventos sintéticos que encapsulam os eventos do DOM para normalizar o comportamento entre diferentes navegadores.
 :::
+
+### Recebendo elementos JSX via props
+
+Um componente pode receber via _prop_ elementos JSX.
+Isso pode é muito útil quando nosso componente funciona como um container para conteúdo arbitrário, como no exemplo abaixo:
+
+```tsx
+function Panel(props: { title: string; content: React.ReactNode }) {
+  return (
+    <div>
+      <h3>{props.title}</h3>
+      <div>{props.content}</div>
+    </div>
+  );
+}
+```
+
+Podemos utilizar o componente `Panel` da seguinte forma:
+
+```tsx
+<Panel
+  title="Meu painel"
+  content={
+    <p>
+      Este é um conteúdo arbitrário com diferentes elementos <strong>HTML</strong>
+    </p>
+  }
+/>
+```
