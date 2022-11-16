@@ -160,3 +160,26 @@ Portanto, o correto seria modificar o componente `TodoList` para sanar o problem
   ))}
 </ul>
 ```
+
+### Tratamento de eventos
+
+O tratamento de eventos em React é feito com sintaxe semelhante à passagem de propriedades, por exemplo:
+
+```tsx
+function EventHandling() {
+  function handleClick(evt: React.MouseEvent) {
+    console.log("the button was clicked");
+  }
+
+  return <button onClick={handleClick}>Click me</button>;
+}
+```
+
+É importante notar que nome da propriedade é sempre em _camel case_, seguindo o padrão `onXxx`, onde `Xxx` é um nome de evento.
+Ademais, o valor da propriedade deve ser uma função, que recebe como parâmetro um objeto de evento.
+
+:::info
+**Nota:**
+No código acima usamos o tipo `React.MouseEvent` para anotar o parâmetro `evt` do handler do evento.
+O React usa eventos sintéticos que encapsulam os eventos do DOM para normalizar o comportamento entre diferentes navegadores.
+:::
