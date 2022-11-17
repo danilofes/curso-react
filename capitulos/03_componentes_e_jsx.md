@@ -18,7 +18,7 @@ Note que definimos que o parâmetro `props` deve possuir a propriedade `name`.
 Além disso, usamos a sintaxe `{props.name}` para incluir o valor de `props.name` no texto do elemento `div`.
 Esta sintaxe é um recurso do JSX conhecido como interpolação.
 Sempre que abrimos chaves dentro do JSX, podemos avaliar uma expressão TypeScript convencional.
-Falaremos mais sobre este recurso em breve.
+Veremos esse recurso frequentemente nos próximos exemplos.
 
 Usamos o componente `Hello` em JSX com sintaxe abaixo (elementos JSX podem ser elementos HTML nativos ou componentes React).
 
@@ -32,6 +32,8 @@ Como resultado, teremos no DOM:
 <div>Hello Danilo</div>
 ```
 
+#### Propriedades de elementos HTML
+
 Em JSX, assim como passamos propriedade para componentes, podemos usar a mesma sintaxe para passar propriedades para elementos HTML.
 Considere o exemplo a seguir.
 
@@ -44,11 +46,86 @@ function Image(props: { url: string; description: string }) {
 Neste caso, passamos as propriedade `src` e `alt` para o elemento `img`. No entanto, usamos a sintaxe de interpolação, tendo em vista que estamos passando o valor de uma expressão TypeScript.
 
 :::info
-**Nota:** De forma geral, qualquer atributo HTML pode ser usado normalmente em JSX.
+**Nota:**
+De forma geral, qualquer atributo HTML pode ser usado normalmente em JSX.
 No entanto, você deve ter observado que usamos a propriedade `className` em vez de `class`.
 Como `class` é uma palavra-chave reservada em JavaScript, o JSX usa `className` em seu lugar para evitar problemas com a sintaxe da linguagem.
 Outra exceção é o atributo `for`, que deve ser escrito como `htmlFor` em JSX.
 :::
+
+#### Tratamento de eventos
+
+O tratamento de eventos em React é feito com sintaxe semelhante à passagem de propriedades, por exemplo:
+
+```tsx
+function EventHandling() {
+  function handleClick(evt: React.MouseEvent) {
+    console.log("the button was clicked");
+  }
+
+  return <button onClick={handleClick}>Click me</button>;
+}
+```
+
+É importante notar que nome da propriedade é sempre em _camel case_, seguindo o padrão `onXxx`, onde `Xxx` é um nome de evento.
+Ademais, o valor da propriedade deve ser uma função, que recebe como parâmetro um objeto de evento.
+
+:::info
+**Nota:**
+No código acima usamos o tipo `React.MouseEvent` para anotar o parâmetro `evt` do handler do evento.
+O React usa eventos sintéticos que encapsulam os eventos do DOM para normalizar o comportamento entre diferentes navegadores.
+:::
+
+#### Recebendo elementos JSX via props
+
+Um componente pode receber elementos JSX via _props_.
+Isso pode é muito útil quando nosso componente funciona como um container para conteúdo arbitrário, como no exemplo abaixo:
+
+```tsx
+function Panel(props: { title: string; content: React.ReactNode }) {
+  return (
+    <div>
+      <h3>{props.title}</h3>
+      <div>{props.content}</div>
+    </div>
+  );
+}
+```
+
+Podemos utilizar o componente `Panel` da seguinte forma:
+
+```tsx
+<Panel
+  title="Meu painel"
+  content={
+    <p>
+      Este é um conteúdo arbitrário com diferentes elementos <strong>HTML</strong>
+    </p>
+  }
+/>
+```
+
+Como vimos acima, o componente `Panel` recebe elementos JSX via propriedade `content`.
+No entanto, se renomearmos a propriedade para `children` podemos nos beneficiar de uma convenção do React para tornar o código JSX mais simples: o conteúdo passado dentro das _tags_ de abertura e fechamento do componente se tornam o valor da propriedade `children`.
+Ou seja, o novo código ficaria da seguinte forma.
+
+```tsx
+function Panel(props: { title: string; children: React.ReactNode }) {
+  return (
+    <div>
+      <h3>{props.title}</h3>
+      <div>{props.children}</div>
+    </div>
+  );
+}
+```
+
+```tsx
+// O uso do componente agora fica assim:
+<Panel title="Meu painel">
+  <p>O conteúdo dentro da tag é implicitamente passado como valor da propriedade children.</p>
+</Panel>
+```
 
 ### Exibição condicional de elementos
 
@@ -76,7 +153,7 @@ function Card(props: { title: string; description?: string }) {
 }
 ```
 
-Neste componente testamos se existe valor em `props.description` e, por meio de um `if/else` exibimos o JSX correspondente.
+Neste componente testamos se existe valor em `props.description` e, por meio de um `if/else` exibimos elementos JSX diferentes para cada caso.
 Nó podemos reescrever este código de forma mais concisa com o operador ternário.
 
 ```tsx
@@ -90,7 +167,7 @@ function Card(props: { title: string; description?: string }) {
 }
 ```
 
-No exemplo acima usamos uma expressão ternária que retorna um `div` com a descrição quando `props.description` é _truthy_ e retorna `null` caso contrário.
+No exemplo acima usamos uma expressão ternária, dentro do JSX, que retorna um `div` com a descrição quando `props.description` é _truthy_ e retorna `null` caso contrário.
 Neste caso nos beneficiando do fato que ao inserir `null` no JSX nada é exibido.
 Mais especificamente, tanto `null` quanto string vazia, `false` ou `undefined` exibem nada.
 Usando este conhecimento, é possível encurtar ainda mais o código com o operador `&&`.
@@ -121,7 +198,7 @@ function Repeticao() {
 ```
 
 É bastante comum gerarmos elementos JSX a partir de itens de um _array_.
-Portanto, é muito comum usarmos a função `map` para transformar um array de objetos em um array de elementos JSX.
+Portanto, uma maneira elegante de fazer isso é usarmos a função `map` para transformar um array de objetos em um array de elementos JSX.
 O componente `TodoList` a seguir exemplifica este cenário, ele recebe via _props_ uma lista de tarefas e as exibe como saída.
 
 ```tsx
@@ -160,56 +237,4 @@ Portanto, o correto seria modificar o componente `TodoList` para sanar o problem
     <li key={task.id}>{task.description}</li>
   ))}
 </ul>
-```
-
-### Tratamento de eventos
-
-O tratamento de eventos em React é feito com sintaxe semelhante à passagem de propriedades, por exemplo:
-
-```tsx
-function EventHandling() {
-  function handleClick(evt: React.MouseEvent) {
-    console.log("the button was clicked");
-  }
-
-  return <button onClick={handleClick}>Click me</button>;
-}
-```
-
-É importante notar que nome da propriedade é sempre em _camel case_, seguindo o padrão `onXxx`, onde `Xxx` é um nome de evento.
-Ademais, o valor da propriedade deve ser uma função, que recebe como parâmetro um objeto de evento.
-
-:::info
-**Nota:**
-No código acima usamos o tipo `React.MouseEvent` para anotar o parâmetro `evt` do handler do evento.
-O React usa eventos sintéticos que encapsulam os eventos do DOM para normalizar o comportamento entre diferentes navegadores.
-:::
-
-### Recebendo elementos JSX via props
-
-Um componente pode receber via _prop_ elementos JSX.
-Isso pode é muito útil quando nosso componente funciona como um container para conteúdo arbitrário, como no exemplo abaixo:
-
-```tsx
-function Panel(props: { title: string; content: React.ReactNode }) {
-  return (
-    <div>
-      <h3>{props.title}</h3>
-      <div>{props.content}</div>
-    </div>
-  );
-}
-```
-
-Podemos utilizar o componente `Panel` da seguinte forma:
-
-```tsx
-<Panel
-  title="Meu painel"
-  content={
-    <p>
-      Este é um conteúdo arbitrário com diferentes elementos <strong>HTML</strong>
-    </p>
-  }
-/>
 ```
