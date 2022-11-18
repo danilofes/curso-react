@@ -31,7 +31,7 @@ Feito isso, podemos definir nosso primeiro componente React.
 ```
 
 Um componente React é definido por meio de uma função JavaScript.
-Tal função deve retornar um _React Element_, uma estrutura de dados que representa uma subárvore de elementos HTML que serão exibidos na interface.
+Tal função deve retornar um _React Element_, uma estrutura de dados que representa uma subárvore de elementos HTML que serão exibidos na interface, ou seja, inseridos no DOM (Document Object Model).
 Neste caso, estamos retornando um elemento `div`, cujo conteúdo é "Hello world!".
 Ou seja, quando tal componente for exibido na interface, espera-se que ele corresponda ao HTML `<div>Hello world!</div>`.
 De forma geral, podemos dizer objetivo do React é nos ajudar a criar (ou atualizar) elementos na página dinamicamente, via JavaScript.

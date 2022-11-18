@@ -20,7 +20,7 @@ Esta sintaxe é um recurso do JSX conhecido como interpolação.
 Sempre que abrimos chaves dentro do JSX, podemos avaliar uma expressão TypeScript convencional.
 Veremos esse recurso frequentemente nos próximos exemplos.
 
-Usamos o componente `Hello` em JSX com sintaxe abaixo (elementos JSX podem ser elementos HTML nativos ou componentes React).
+Usamos o componente `Hello` em JSX com sintaxe abaixo. Note que elementos React (tags JSX) podem representar elementos HTML nativos ou componentes React.
 
 ```tsx
 <Hello name="Danilo" />
@@ -78,9 +78,9 @@ No código acima usamos o tipo `React.MouseEvent` para anotar o parâmetro `evt`
 O React usa eventos sintéticos que encapsulam os eventos do DOM para normalizar o comportamento entre diferentes navegadores.
 :::
 
-#### Recebendo elementos JSX via props
+#### Recebendo elementos React via props
 
-Um componente pode receber elementos JSX via _props_.
+Um componente pode receber elementos React via _props_.
 Isso pode é muito útil quando nosso componente funciona como um container para conteúdo arbitrário, como no exemplo abaixo:
 
 ```tsx
@@ -109,7 +109,7 @@ Podemos utilizar o componente `Panel` da seguinte forma:
 />
 ```
 
-Como vimos acima, o componente `Panel` recebe elementos JSX via propriedade `content`.
+Como vimos acima, o componente `Panel` recebe elementos React via propriedade `content`.
 No entanto, se renomearmos a propriedade para `children` podemos nos beneficiar de uma convenção do React para tornar o código JSX mais simples: o conteúdo passado dentro das _tags_ de abertura e fechamento do componente se tornam o valor da propriedade `children`.
 Ou seja, o novo código ficaria da seguinte forma.
 
@@ -157,7 +157,7 @@ function Card(props: { title: string; description?: string }) {
 }
 ```
 
-Neste componente testamos se existe valor em `props.description` e, por meio de um `if/else` exibimos elementos JSX diferentes para cada caso.
+Neste componente testamos se existe valor em `props.description` e, por meio de um `if/else` exibimos elementos diferentes para cada caso.
 Nó podemos reescrever este código de forma mais concisa com o operador ternário.
 
 ```tsx
@@ -201,8 +201,8 @@ function Repeticao() {
 }
 ```
 
-É bastante comum gerarmos elementos JSX a partir de itens de um _array_.
-Portanto, uma maneira elegante de fazer isso é usarmos a função `map` para transformar um array de objetos em um array de elementos JSX.
+É bastante comum gerarmos elementos React a partir de itens de um _array_.
+Portanto, uma maneira elegante de fazer isso é usarmos a função `map` para transformar um array de objetos em um array de elementos React.
 O componente `TodoList` a seguir exemplifica este cenário, ele recebe via _props_ uma lista de tarefas e as exibe como saída.
 
 ```tsx
@@ -231,7 +231,7 @@ Se exibirmos os dois exemplos de repetição anteriores no navegador iremos nota
 Warning: Each child in a list should have a unique "key" prop.
 ```
 
-O React está nos alertando que, quando exibimos um _array_ de elementos JSX, devemos atribuir a cada elemento do _array_ um valor distinto para a propriedade `key`.
+O React está nos alertando que, quando exibimos um _array_ de elementos React, devemos atribuir a cada elemento um valor distinto para a propriedade `key`.
 A propriedade `key` é usada internamente pelo React para atualizar o DOM de forma mais eficiente.
 Portanto, o correto seria modificar o componente `TodoList` para sanar o problema:
 
