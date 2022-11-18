@@ -58,6 +58,8 @@ Outra exceção é o atributo `for`, que deve ser escrito como `htmlFor` em JSX.
 O tratamento de eventos em React é feito com sintaxe semelhante à passagem de propriedades, por exemplo:
 
 ```tsx
+import React from "react";
+
 function EventHandling() {
   function handleClick(evt: React.MouseEvent) {
     console.log("the button was clicked");
@@ -82,6 +84,8 @@ Um componente pode receber elementos JSX via _props_.
 Isso pode é muito útil quando nosso componente funciona como um container para conteúdo arbitrário, como no exemplo abaixo:
 
 ```tsx
+import React from "react";
+
 function Panel(props: { title: string; content: React.ReactNode }) {
   return (
     <div>
