@@ -160,7 +160,7 @@ function increment() {
 ```
 
 Agora sim nosso componente funcionará.
-De fato, para trabalhar com React, devemos abraçar o conceito de imutabilidade.
+De fato, para trabalhar com estado em React, devemos abraçar o conceito de imutabilidade.
 Tipos primitivos como `number` ou `string` são inerentemente imutáveis (é impossível mudar seu conteúdo sem criar um novo valor).
-Em contraste, objetos (e _arrays_) são mutáveis, mas **nunca devemos alterar o conteúdo de objetos diretamente**.
+Em contraste, objetos (e _arrays_) são mutáveis, mas **nunca devemos alterá-los**.
 Crie um novo objeto (ou _array_) com as alterações desejadas.
