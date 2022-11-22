@@ -43,15 +43,43 @@ function Image(props: { url: string; description: string }) {
 }
 ```
 
-Neste caso, passamos as propriedade `src` e `alt` para o elemento `img`. No entanto, usamos a sintaxe de interpolação, tendo em vista que estamos passando o valor de uma expressão TypeScript.
+Neste caso, passamos as propriedade `src` e `alt` para o elemento `img`.
+Observe que usamos a sintaxe de interpolação para passar o valor de `src` e `alt`, tendo em vista que estamos avaliando uma expressão TypeScript.
+De forma geral, existem propriedades JSX correspondentes às propriedades dos elementos no DOM ou atributos da tag.
+No entanto, usamos sempre o padrão de nomenclatura _camel case_ quando o atributo é composto por duas palavras.
+Por exemplo, o atributo `tabindex` se tornaria `tabIndex` em JSX.
 
 :::info
 **Nota:**
-De forma geral, qualquer atributo HTML pode ser usado normalmente em JSX.
-No entanto, você deve ter observado que usamos a propriedade `className` em vez de `class`.
+Você deve ter observado que usamos a propriedade `className` em vez de `class` no exemplo anterior.
 Como `class` é uma palavra-chave reservada em JavaScript, o JSX usa `className` em seu lugar para evitar problemas com a sintaxe da linguagem.
 Outra exceção é o atributo `for`, que deve ser escrito como `htmlFor` em JSX.
 :::
+
+#### A propriedade `style`
+
+O valor da propriedade `style` em uma tag JSX deve ser um objeto, não uma string.
+Este objeto contém uma chave para cada propriedade CSS a ser informada, convertendo seu nome para _camel case_.
+Por exemplo, considere o HTML abaixo:
+
+```html
+<div style="border: 2px solid green; padding-top: 4px">div com estilo</div>
+```
+
+Em JSX, ele poderia ser expresso como:
+
+```tsx
+<div style={{ border: "2px solid green", paddingTop: "4px" }}>div com estilo</div>
+```
+
+O React adiciona automaticamente a unidade `px` em certas propriedades numéricas.
+Por exemplo, as duas linhas de código a seguir dariam o mesmo resultado:
+
+```tsx
+<div style={{ height: 10 }}>olá</div>
+
+<div style={{ height: '10px' }}>olá</div>
+```
 
 #### Tratamento de eventos
 
