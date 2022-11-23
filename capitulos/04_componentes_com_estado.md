@@ -84,7 +84,7 @@ Nele usamos interpolação para exibir o valor do estado (`counter`) e chamamos 
 :::info
 **Nota:**
 `useState` é um exemplo de um _hook_, um tipo especial de função que o React nos fornece para adicionar comportamentos diversos aos componentes.
-Ao longo desde curso estudaremos vários outros _hooks_.
+Ao longo desde curso estudaremos vários outros _hooks_, como `useEffect`, `useMemo`, entre outros.
 Você pode reconhecê-los facilmente pelo padrão de nomenclatura `useXxx`.
 :::
 
@@ -111,7 +111,12 @@ O React então faz uma comparação entre o DOM e o virtual DOM e altera apenas 
 A grande vantagem de se usar React, portanto, reside no fato de que não precisamos nos preocupar em como atualizar a interface.
 Em um componente, nós simplesmente descrevemos como a interface deve ser, dados o _props_ e o estado atual.
 Ou seja, o código-fonte torna-se mais declarativo e menos imperativo.
-Isto não parece grande coisa em componentes pequenos como o que construímos, mas conforme nossos componentes ficam maiores e mais complexos, podemos perceber a vantagem deste paradigma.
+Fazendo uma analogia com programação funcional, a função de renderização de um componente deve fazer uma computação pura, ou seja:
+
+- para a mesma entrada (props e estado) deve retornar a mesma saída (JSX);
+- não deve ter efeitos colaterais (alterar variáveis globais, fazer comunicação de rede, etc.).
+
+Isto não parece grande coisa em componentes pequenos como o que construímos, mas conforme nossos componentes ficam maiores e mais complexos, perceberemos a vantagem deste paradigma.
 
 ### Estado e imutabilidade
 
