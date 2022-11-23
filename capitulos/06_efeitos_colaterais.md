@@ -32,7 +32,6 @@ Neste caso, o efeito executa após a primeira renderização e sempre que um dos
 ```tsx
 useEffect(
   () => {
-    // Aqui executamos o efeito desejado.
     // Esta função será executada após a primeira renderização e sempre que valor1 ou valor2 mudar.
   },
   [valor1, valor2] // Suponha que existam variáveis valor1 e valor2.
@@ -45,7 +44,6 @@ Neste caso, o efeito executa apenas após a primeira renderização.
 ```tsx
 useEffect(
   () => {
-    // Aqui executamos o efeito desejado.
     // Esta função será executada após a primeira renderização.
   },
   [] // Passar um array vazio é diferente de não passar o segundo parâmetro.
