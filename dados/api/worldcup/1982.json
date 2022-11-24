@@ -1,0 +1,414 @@
+{
+  "year": "1982",
+  "matches": [
+    {
+      "date": "1982-06-13",
+      "stage": "Group 3",
+      "team1": "Argentina",
+      "team2": "Belgium",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-14",
+      "stage": "Group 1",
+      "team1": "Italy",
+      "team2": "Poland",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "1982-06-14",
+      "stage": "Group 6",
+      "team1": "Brazil",
+      "team2": "Soviet Union",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-15",
+      "stage": "Group 1",
+      "team1": "Peru",
+      "team2": "Cameroon",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "1982-06-15",
+      "stage": "Group 3",
+      "team1": "Hungary",
+      "team2": "El Salvador",
+      "score1": 10,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-15",
+      "stage": "Group 6",
+      "team1": "Scotland",
+      "team2": "New Zealand",
+      "score1": 5,
+      "score2": 2
+    },
+    {
+      "date": "1982-06-16",
+      "stage": "Group 2",
+      "team1": "West Germany",
+      "team2": "Algeria",
+      "score1": 1,
+      "score2": 2
+    },
+    {
+      "date": "1982-06-16",
+      "stage": "Group 4",
+      "team1": "England",
+      "team2": "France",
+      "score1": 3,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-16",
+      "stage": "Group 5",
+      "team1": "Spain",
+      "team2": "Honduras",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-17",
+      "stage": "Group 2",
+      "team1": "Chile",
+      "team2": "Austria",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-17",
+      "stage": "Group 4",
+      "team1": "Czechoslovakia",
+      "team2": "Kuwait",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-17",
+      "stage": "Group 5",
+      "team1": "Yugoslavia",
+      "team2": "Northern Ireland",
+      "score1": 0,
+      "score2": 0
+    },
+    { "date": "1982-06-18", "stage": "Group 1", "team1": "Italy", "team2": "Peru", "score1": 1, "score2": 1 },
+    {
+      "date": "1982-06-18",
+      "stage": "Group 3",
+      "team1": "Argentina",
+      "team2": "Hungary",
+      "score1": 4,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-18",
+      "stage": "Group 6",
+      "team1": "Brazil",
+      "team2": "Scotland",
+      "score1": 4,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-19",
+      "stage": "Group 1",
+      "team1": "Poland",
+      "team2": "Cameroon",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "1982-06-19",
+      "stage": "Group 3",
+      "team1": "Belgium",
+      "team2": "El Salvador",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "1982-06-19",
+      "stage": "Group 6",
+      "team1": "Soviet Union",
+      "team2": "New Zealand",
+      "score1": 3,
+      "score2": 0
+    },
+    {
+      "date": "1982-06-20",
+      "stage": "Group 2",
+      "team1": "West Germany",
+      "team2": "Chile",
+      "score1": 4,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-20",
+      "stage": "Group 4",
+      "team1": "England",
+      "team2": "Czechoslovakia",
+      "score1": 2,
+      "score2": 0
+    },
+    {
+      "date": "1982-06-20",
+      "stage": "Group 5",
+      "team1": "Spain",
+      "team2": "Yugoslavia",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-21",
+      "stage": "Group 2",
+      "team1": "Algeria",
+      "team2": "Austria",
+      "score1": 0,
+      "score2": 2
+    },
+    {
+      "date": "1982-06-21",
+      "stage": "Group 4",
+      "team1": "France",
+      "team2": "Kuwait",
+      "score1": 4,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-21",
+      "stage": "Group 5",
+      "team1": "Honduras",
+      "team2": "Northern Ireland",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-22",
+      "stage": "Group 1",
+      "team1": "Poland",
+      "team2": "Peru",
+      "score1": 5,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-22",
+      "stage": "Group 3",
+      "team1": "Belgium",
+      "team2": "Hungary",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-22",
+      "stage": "Group 6",
+      "team1": "Soviet Union",
+      "team2": "Scotland",
+      "score1": 2,
+      "score2": 2
+    },
+    {
+      "date": "1982-06-23",
+      "stage": "Group 1",
+      "team1": "Italy",
+      "team2": "Cameroon",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-23",
+      "stage": "Group 3",
+      "team1": "Argentina",
+      "team2": "El Salvador",
+      "score1": 2,
+      "score2": 0
+    },
+    {
+      "date": "1982-06-23",
+      "stage": "Group 6",
+      "team1": "Brazil",
+      "team2": "New Zealand",
+      "score1": 4,
+      "score2": 0
+    },
+    {
+      "date": "1982-06-24",
+      "stage": "Group 2",
+      "team1": "Algeria",
+      "team2": "Chile",
+      "score1": 3,
+      "score2": 2
+    },
+    {
+      "date": "1982-06-24",
+      "stage": "Group 4",
+      "team1": "France",
+      "team2": "Czechoslovakia",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-24",
+      "stage": "Group 5",
+      "team1": "Honduras",
+      "team2": "Yugoslavia",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-25",
+      "stage": "Group 2",
+      "team1": "West Germany",
+      "team2": "Austria",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "1982-06-25",
+      "stage": "Group 4",
+      "team1": "England",
+      "team2": "Kuwait",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "1982-06-25",
+      "stage": "Group 5",
+      "team1": "Spain",
+      "team2": "Northern Ireland",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-28",
+      "stage": "Second group stage",
+      "team1": "Austria",
+      "team2": "France",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-28",
+      "stage": "Second group stage",
+      "team1": "Poland",
+      "team2": "Belgium",
+      "score1": 3,
+      "score2": 0
+    },
+    {
+      "date": "1982-06-29",
+      "stage": "Second group stage",
+      "team1": "Italy",
+      "team2": "Argentina",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "1982-06-29",
+      "stage": "Second group stage",
+      "team1": "West Germany",
+      "team2": "England",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "1982-07-01",
+      "stage": "Second group stage",
+      "team1": "Austria",
+      "team2": "Northern Ireland",
+      "score1": 2,
+      "score2": 2
+    },
+    {
+      "date": "1982-07-01",
+      "stage": "Second group stage",
+      "team1": "Belgium",
+      "team2": "Soviet Union",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "1982-07-02",
+      "stage": "Second group stage",
+      "team1": "Argentina",
+      "team2": "Brazil",
+      "score1": 1,
+      "score2": 3
+    },
+    {
+      "date": "1982-07-02",
+      "stage": "Second group stage",
+      "team1": "West Germany",
+      "team2": "Spain",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "1982-07-04",
+      "stage": "Second group stage",
+      "team1": "France",
+      "team2": "Northern Ireland",
+      "score1": 4,
+      "score2": 1
+    },
+    {
+      "date": "1982-07-04",
+      "stage": "Second group stage",
+      "team1": "Soviet Union",
+      "team2": "Poland",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "1982-07-05",
+      "stage": "Second group stage",
+      "team1": "Italy",
+      "team2": "Brazil",
+      "score1": 3,
+      "score2": 2
+    },
+    {
+      "date": "1982-07-05",
+      "stage": "Second group stage",
+      "team1": "Spain",
+      "team2": "England",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "1982-07-08",
+      "stage": "Semi-finals",
+      "team1": "Poland",
+      "team2": "Italy",
+      "score1": 0,
+      "score2": 2
+    },
+    {
+      "date": "1982-07-08",
+      "stage": "Semi-finals",
+      "team1": "West Germany",
+      "team2": "France",
+      "score1": 3,
+      "score2": 3
+    },
+    {
+      "date": "1982-07-10",
+      "stage": "Third-place match",
+      "team1": "Poland",
+      "team2": "France",
+      "score1": 3,
+      "score2": 2
+    },
+    {
+      "date": "1982-07-11",
+      "stage": "Final",
+      "team1": "Italy",
+      "team2": "West Germany",
+      "score1": 3,
+      "score2": 1
+    }
+  ]
+}

@@ -1,0 +1,517 @@
+{
+  "year": "2010",
+  "matches": [
+    {
+      "date": "2010-06-11",
+      "stage": "Group A",
+      "team1": "South Africa",
+      "team2": "Mexico",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-11",
+      "stage": "Group A",
+      "team1": "Uruguay",
+      "team2": "France",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "2010-06-12",
+      "stage": "Group B",
+      "team1": "South Korea",
+      "team2": "Greece",
+      "score1": 2,
+      "score2": 0
+    },
+    {
+      "date": "2010-06-12",
+      "stage": "Group B",
+      "team1": "Argentina",
+      "team2": "Nigeria",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "2010-06-12",
+      "stage": "Group C",
+      "team1": "England",
+      "team2": "United States",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-13",
+      "stage": "Group C",
+      "team1": "Algeria",
+      "team2": "Slovenia",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-13",
+      "stage": "Group D",
+      "team1": "Serbia",
+      "team2": "Ghana",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-13",
+      "stage": "Group D",
+      "team1": "Germany",
+      "team2": "Australia",
+      "score1": 4,
+      "score2": 0
+    },
+    {
+      "date": "2010-06-14",
+      "stage": "Group E",
+      "team1": "Netherlands",
+      "team2": "Denmark",
+      "score1": 2,
+      "score2": 0
+    },
+    {
+      "date": "2010-06-14",
+      "stage": "Group E",
+      "team1": "Japan",
+      "team2": "Cameroon",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "2010-06-14",
+      "stage": "Group F",
+      "team1": "Italy",
+      "team2": "Paraguay",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-15",
+      "stage": "Group F",
+      "team1": "New Zealand",
+      "team2": "Slovakia",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-15",
+      "stage": "Group G",
+      "team1": "Ivory Coast",
+      "team2": "Portugal",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "2010-06-15",
+      "stage": "Group G",
+      "team1": "Brazil",
+      "team2": "North Korea",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-16",
+      "stage": "Group H",
+      "team1": "Honduras",
+      "team2": "Chile",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-16",
+      "stage": "Group H",
+      "team1": "Spain",
+      "team2": "Switzerland",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-16",
+      "stage": "Group A",
+      "team1": "South Africa",
+      "team2": "Uruguay",
+      "score1": 0,
+      "score2": 3
+    },
+    {
+      "date": "2010-06-17",
+      "stage": "Group B",
+      "team1": "Argentina",
+      "team2": "South Korea",
+      "score1": 4,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-17",
+      "stage": "Group B",
+      "team1": "Greece",
+      "team2": "Nigeria",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-17",
+      "stage": "Group A",
+      "team1": "France",
+      "team2": "Mexico",
+      "score1": 0,
+      "score2": 2
+    },
+    {
+      "date": "2010-06-18",
+      "stage": "Group D",
+      "team1": "Germany",
+      "team2": "Serbia",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-18",
+      "stage": "Group C",
+      "team1": "Slovenia",
+      "team2": "United States",
+      "score1": 2,
+      "score2": 2
+    },
+    {
+      "date": "2010-06-18",
+      "stage": "Group C",
+      "team1": "England",
+      "team2": "Algeria",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "2010-06-19",
+      "stage": "Group E",
+      "team1": "Netherlands",
+      "team2": "Japan",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "2010-06-19",
+      "stage": "Group D",
+      "team1": "Ghana",
+      "team2": "Australia",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-19",
+      "stage": "Group E",
+      "team1": "Cameroon",
+      "team2": "Denmark",
+      "score1": 1,
+      "score2": 2
+    },
+    {
+      "date": "2010-06-20",
+      "stage": "Group F",
+      "team1": "Slovakia",
+      "team2": "Paraguay",
+      "score1": 0,
+      "score2": 2
+    },
+    {
+      "date": "2010-06-20",
+      "stage": "Group F",
+      "team1": "Italy",
+      "team2": "New Zealand",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-20",
+      "stage": "Group G",
+      "team1": "Brazil",
+      "team2": "Ivory Coast",
+      "score1": 3,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-21",
+      "stage": "Group G",
+      "team1": "Portugal",
+      "team2": "North Korea",
+      "score1": 7,
+      "score2": 0
+    },
+    {
+      "date": "2010-06-21",
+      "stage": "Group H",
+      "team1": "Chile",
+      "team2": "Switzerland",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "2010-06-21",
+      "stage": "Group H",
+      "team1": "Spain",
+      "team2": "Honduras",
+      "score1": 2,
+      "score2": 0
+    },
+    {
+      "date": "2010-06-22",
+      "stage": "Group A",
+      "team1": "France",
+      "team2": "South Africa",
+      "score1": 1,
+      "score2": 2
+    },
+    {
+      "date": "2010-06-22",
+      "stage": "Group A",
+      "team1": "Mexico",
+      "team2": "Uruguay",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-22",
+      "stage": "Group B",
+      "team1": "Greece",
+      "team2": "Argentina",
+      "score1": 0,
+      "score2": 2
+    },
+    {
+      "date": "2010-06-22",
+      "stage": "Group B",
+      "team1": "Nigeria",
+      "team2": "South Korea",
+      "score1": 2,
+      "score2": 2
+    },
+    {
+      "date": "2010-06-23",
+      "stage": "Group C",
+      "team1": "Slovenia",
+      "team2": "England",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-23",
+      "stage": "Group C",
+      "team1": "United States",
+      "team2": "Algeria",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "2010-06-23",
+      "stage": "Group D",
+      "team1": "Australia",
+      "team2": "Serbia",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-23",
+      "stage": "Group D",
+      "team1": "Ghana",
+      "team2": "Germany",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-24",
+      "stage": "Group F",
+      "team1": "Paraguay",
+      "team2": "New Zealand",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "2010-06-24",
+      "stage": "Group F",
+      "team1": "Slovakia",
+      "team2": "Italy",
+      "score1": 3,
+      "score2": 2
+    },
+    {
+      "date": "2010-06-24",
+      "stage": "Group E",
+      "team1": "Cameroon",
+      "team2": "Netherlands",
+      "score1": 1,
+      "score2": 2
+    },
+    {
+      "date": "2010-06-24",
+      "stage": "Group E",
+      "team1": "Denmark",
+      "team2": "Japan",
+      "score1": 1,
+      "score2": 3
+    },
+    {
+      "date": "2010-06-25",
+      "stage": "Group G",
+      "team1": "North Korea",
+      "team2": "Ivory Coast",
+      "score1": 0,
+      "score2": 3
+    },
+    {
+      "date": "2010-06-25",
+      "stage": "Group G",
+      "team1": "Portugal",
+      "team2": "Brazil",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "2010-06-25",
+      "stage": "Group H",
+      "team1": "Chile",
+      "team2": "Spain",
+      "score1": 1,
+      "score2": 2
+    },
+    {
+      "date": "2010-06-25",
+      "stage": "Group H",
+      "team1": "Switzerland",
+      "team2": "Honduras",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "2010-06-26",
+      "stage": "Round of 16",
+      "team1": "Uruguay",
+      "team2": "South Korea",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-26",
+      "stage": "Round of 16",
+      "team1": "United States",
+      "team2": "Ghana",
+      "score1": 1,
+      "score2": 2
+    },
+    {
+      "date": "2010-06-27",
+      "stage": "Round of 16",
+      "team1": "Germany",
+      "team2": "England",
+      "score1": 4,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-27",
+      "stage": "Round of 16",
+      "team1": "Argentina",
+      "team2": "Mexico",
+      "score1": 3,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-28",
+      "stage": "Round of 16",
+      "team1": "Netherlands",
+      "team2": "Slovakia",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "2010-06-28",
+      "stage": "Round of 16",
+      "team1": "Brazil",
+      "team2": "Chile",
+      "score1": 3,
+      "score2": 0
+    },
+    {
+      "date": "2010-06-29",
+      "stage": "Round of 16",
+      "team1": "Paraguay",
+      "team2": "Japan",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "2010-06-29",
+      "stage": "Round of 16",
+      "team1": "Spain",
+      "team2": "Portugal",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "2010-07-02",
+      "stage": "Quarter-finals",
+      "team1": "Netherlands",
+      "team2": "Brazil",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "2010-07-02",
+      "stage": "Quarter-finals",
+      "team1": "Uruguay",
+      "team2": "Ghana",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "2010-07-03",
+      "stage": "Quarter-finals",
+      "team1": "Argentina",
+      "team2": "Germany",
+      "score1": 0,
+      "score2": 4
+    },
+    {
+      "date": "2010-07-03",
+      "stage": "Quarter-finals",
+      "team1": "Paraguay",
+      "team2": "Spain",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "2010-07-06",
+      "stage": "Semi-finals",
+      "team1": "Uruguay",
+      "team2": "Netherlands",
+      "score1": 2,
+      "score2": 3
+    },
+    {
+      "date": "2010-07-07",
+      "stage": "Semi-finals",
+      "team1": "Germany",
+      "team2": "Spain",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "2010-07-10",
+      "stage": "Third-place match",
+      "team1": "Uruguay",
+      "team2": "Germany",
+      "score1": 2,
+      "score2": 3
+    },
+    {
+      "date": "2010-07-11",
+      "stage": "Final",
+      "team1": "Netherlands",
+      "team2": "Spain",
+      "score1": 0,
+      "score2": 1
+    }
+  ]
+}

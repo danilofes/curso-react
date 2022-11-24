@@ -1,0 +1,302 @@
+{
+  "year": "1978",
+  "matches": [
+    {
+      "date": "1978-06-01",
+      "stage": "Group 2",
+      "team1": "West Germany",
+      "team2": "Poland",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "1978-06-02",
+      "stage": "Group 1",
+      "team1": "Italy",
+      "team2": "France",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "1978-06-02",
+      "stage": "Group 2",
+      "team1": "Tunisia",
+      "team2": "Mexico",
+      "score1": 3,
+      "score2": 1
+    },
+    {
+      "date": "1978-06-02",
+      "stage": "Group 1",
+      "team1": "Argentina",
+      "team2": "Hungary",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "1978-06-03",
+      "stage": "Group 3",
+      "team1": "Austria",
+      "team2": "Spain",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "1978-06-03",
+      "stage": "Group 3",
+      "team1": "Brazil",
+      "team2": "Sweden",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "1978-06-03",
+      "stage": "Group 4",
+      "team1": "Netherlands",
+      "team2": "Iran",
+      "score1": 3,
+      "score2": 0
+    },
+    {
+      "date": "1978-06-03",
+      "stage": "Group 4",
+      "team1": "Peru",
+      "team2": "Scotland",
+      "score1": 3,
+      "score2": 1
+    },
+    {
+      "date": "1978-06-06",
+      "stage": "Group 1",
+      "team1": "Italy",
+      "team2": "Hungary",
+      "score1": 3,
+      "score2": 1
+    },
+    {
+      "date": "1978-06-06",
+      "stage": "Group 2",
+      "team1": "Poland",
+      "team2": "Tunisia",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "1978-06-06",
+      "stage": "Group 2",
+      "team1": "West Germany",
+      "team2": "Mexico",
+      "score1": 6,
+      "score2": 0
+    },
+    {
+      "date": "1978-06-06",
+      "stage": "Group 1",
+      "team1": "Argentina",
+      "team2": "France",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "1978-06-07",
+      "stage": "Group 3",
+      "team1": "Austria",
+      "team2": "Sweden",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "1978-06-07",
+      "stage": "Group 3",
+      "team1": "Brazil",
+      "team2": "Spain",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "1978-06-07",
+      "stage": "Group 4",
+      "team1": "Netherlands",
+      "team2": "Peru",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "1978-06-07",
+      "stage": "Group 4",
+      "team1": "Scotland",
+      "team2": "Iran",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "1978-06-10",
+      "stage": "Group 1",
+      "team1": "France",
+      "team2": "Hungary",
+      "score1": 3,
+      "score2": 1
+    },
+    {
+      "date": "1978-06-10",
+      "stage": "Group 2",
+      "team1": "Poland",
+      "team2": "Mexico",
+      "score1": 3,
+      "score2": 1
+    },
+    {
+      "date": "1978-06-10",
+      "stage": "Group 2",
+      "team1": "West Germany",
+      "team2": "Tunisia",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "1978-06-10",
+      "stage": "Group 1",
+      "team1": "Argentina",
+      "team2": "Italy",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "1978-06-11",
+      "stage": "Group 3",
+      "team1": "Brazil",
+      "team2": "Austria",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "1978-06-11",
+      "stage": "Group 3",
+      "team1": "Spain",
+      "team2": "Sweden",
+      "score1": 1,
+      "score2": 0
+    },
+    { "date": "1978-06-11", "stage": "Group 4", "team1": "Peru", "team2": "Iran", "score1": 4, "score2": 1 },
+    {
+      "date": "1978-06-11",
+      "stage": "Group 4",
+      "team1": "Scotland",
+      "team2": "Netherlands",
+      "score1": 3,
+      "score2": 2
+    },
+    {
+      "date": "1978-06-14",
+      "stage": "Second group stage",
+      "team1": "Austria",
+      "team2": "Netherlands",
+      "score1": 1,
+      "score2": 5
+    },
+    {
+      "date": "1978-06-14",
+      "stage": "Second group stage",
+      "team1": "Italy",
+      "team2": "West Germany",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "1978-06-14",
+      "stage": "Second group stage",
+      "team1": "Brazil",
+      "team2": "Peru",
+      "score1": 3,
+      "score2": 0
+    },
+    {
+      "date": "1978-06-14",
+      "stage": "Second group stage",
+      "team1": "Argentina",
+      "team2": "Poland",
+      "score1": 2,
+      "score2": 0
+    },
+    {
+      "date": "1978-06-18",
+      "stage": "Second group stage",
+      "team1": "Peru",
+      "team2": "Poland",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "1978-06-18",
+      "stage": "Second group stage",
+      "team1": "Italy",
+      "team2": "Austria",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "1978-06-18",
+      "stage": "Second group stage",
+      "team1": "Netherlands",
+      "team2": "West Germany",
+      "score1": 2,
+      "score2": 2
+    },
+    {
+      "date": "1978-06-18",
+      "stage": "Second group stage",
+      "team1": "Argentina",
+      "team2": "Brazil",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "1978-06-21",
+      "stage": "Second group stage",
+      "team1": "Austria",
+      "team2": "West Germany",
+      "score1": 3,
+      "score2": 2
+    },
+    {
+      "date": "1978-06-21",
+      "stage": "Second group stage",
+      "team1": "Italy",
+      "team2": "Netherlands",
+      "score1": 1,
+      "score2": 2
+    },
+    {
+      "date": "1978-06-21",
+      "stage": "Second group stage",
+      "team1": "Brazil",
+      "team2": "Poland",
+      "score1": 3,
+      "score2": 1
+    },
+    {
+      "date": "1978-06-21",
+      "stage": "Second group stage",
+      "team1": "Argentina",
+      "team2": "Peru",
+      "score1": 6,
+      "score2": 0
+    },
+    {
+      "date": "1978-06-24",
+      "stage": "Third-place match",
+      "team1": "Brazil",
+      "team2": "Italy",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "1978-06-25",
+      "stage": "Final",
+      "team1": "Argentina",
+      "team2": "Netherlands",
+      "score1": 3,
+      "score2": 1
+    }
+  ]
+}

@@ -1,0 +1,517 @@
+{
+  "year": "2002",
+  "matches": [
+    {
+      "date": "2002-05-31",
+      "stage": "Group A",
+      "team1": "France",
+      "team2": "Senegal",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-01",
+      "stage": "Group E",
+      "team1": "Republic of Ireland",
+      "team2": "Cameroon",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-01",
+      "stage": "Group A",
+      "team1": "Uruguay",
+      "team2": "Denmark",
+      "score1": 1,
+      "score2": 2
+    },
+    {
+      "date": "2002-06-01",
+      "stage": "Group E",
+      "team1": "Germany",
+      "team2": "Saudi Arabia",
+      "score1": 8,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-02",
+      "stage": "Group F",
+      "team1": "Argentina",
+      "team2": "Nigeria",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-02",
+      "stage": "Group B",
+      "team1": "Paraguay",
+      "team2": "South Africa",
+      "score1": 2,
+      "score2": 2
+    },
+    {
+      "date": "2002-06-02",
+      "stage": "Group F",
+      "team1": "England",
+      "team2": "Sweden",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-02",
+      "stage": "Group B",
+      "team1": "Spain",
+      "team2": "Slovenia",
+      "score1": 3,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-03",
+      "stage": "Group G",
+      "team1": "Croatia",
+      "team2": "Mexico",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-03",
+      "stage": "Group C",
+      "team1": "Brazil",
+      "team2": "Turkey",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-03",
+      "stage": "Group G",
+      "team1": "Italy",
+      "team2": "Ecuador",
+      "score1": 2,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-04",
+      "stage": "Group C",
+      "team1": "China",
+      "team2": "Costa Rica",
+      "score1": 0,
+      "score2": 2
+    },
+    {
+      "date": "2002-06-04",
+      "stage": "Group H",
+      "team1": "Japan",
+      "team2": "Belgium",
+      "score1": 2,
+      "score2": 2
+    },
+    {
+      "date": "2002-06-04",
+      "stage": "Group D",
+      "team1": "South Korea",
+      "team2": "Poland",
+      "score1": 2,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-05",
+      "stage": "Group H",
+      "team1": "Russia",
+      "team2": "Tunisia",
+      "score1": 2,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-05",
+      "stage": "Group D",
+      "team1": "United States",
+      "team2": "Portugal",
+      "score1": 3,
+      "score2": 2
+    },
+    {
+      "date": "2002-06-05",
+      "stage": "Group E",
+      "team1": "Germany",
+      "team2": "Republic of Ireland",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-06",
+      "stage": "Group A",
+      "team1": "Denmark",
+      "team2": "Senegal",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-06",
+      "stage": "Group E",
+      "team1": "Cameroon",
+      "team2": "Saudi Arabia",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-06",
+      "stage": "Group A",
+      "team1": "France",
+      "team2": "Uruguay",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-07",
+      "stage": "Group F",
+      "team1": "Sweden",
+      "team2": "Nigeria",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-07",
+      "stage": "Group B",
+      "team1": "Spain",
+      "team2": "Paraguay",
+      "score1": 3,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-07",
+      "stage": "Group F",
+      "team1": "Argentina",
+      "team2": "England",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-08",
+      "stage": "Group B",
+      "team1": "South Africa",
+      "team2": "Slovenia",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-08",
+      "stage": "Group G",
+      "team1": "Italy",
+      "team2": "Croatia",
+      "score1": 1,
+      "score2": 2
+    },
+    {
+      "date": "2002-06-08",
+      "stage": "Group C",
+      "team1": "Brazil",
+      "team2": "China",
+      "score1": 4,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-09",
+      "stage": "Group G",
+      "team1": "Mexico",
+      "team2": "Ecuador",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-09",
+      "stage": "Group C",
+      "team1": "Costa Rica",
+      "team2": "Turkey",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-09",
+      "stage": "Group H",
+      "team1": "Japan",
+      "team2": "Russia",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-10",
+      "stage": "Group D",
+      "team1": "South Korea",
+      "team2": "United States",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-10",
+      "stage": "Group H",
+      "team1": "Tunisia",
+      "team2": "Belgium",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-10",
+      "stage": "Group D",
+      "team1": "Portugal",
+      "team2": "Poland",
+      "score1": 4,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-11",
+      "stage": "Group A",
+      "team1": "Denmark",
+      "team2": "France",
+      "score1": 2,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-11",
+      "stage": "Group A",
+      "team1": "Senegal",
+      "team2": "Uruguay",
+      "score1": 3,
+      "score2": 3
+    },
+    {
+      "date": "2002-06-11",
+      "stage": "Group E",
+      "team1": "Cameroon",
+      "team2": "Germany",
+      "score1": 0,
+      "score2": 2
+    },
+    {
+      "date": "2002-06-11",
+      "stage": "Group E",
+      "team1": "Saudi Arabia",
+      "team2": "Republic of Ireland",
+      "score1": 0,
+      "score2": 3
+    },
+    {
+      "date": "2002-06-12",
+      "stage": "Group F",
+      "team1": "Nigeria",
+      "team2": "England",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-12",
+      "stage": "Group F",
+      "team1": "Sweden",
+      "team2": "Argentina",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-12",
+      "stage": "Group B",
+      "team1": "Slovenia",
+      "team2": "Paraguay",
+      "score1": 1,
+      "score2": 3
+    },
+    {
+      "date": "2002-06-12",
+      "stage": "Group B",
+      "team1": "South Africa",
+      "team2": "Spain",
+      "score1": 2,
+      "score2": 3
+    },
+    {
+      "date": "2002-06-13",
+      "stage": "Group C",
+      "team1": "Costa Rica",
+      "team2": "Brazil",
+      "score1": 2,
+      "score2": 5
+    },
+    {
+      "date": "2002-06-13",
+      "stage": "Group C",
+      "team1": "Turkey",
+      "team2": "China",
+      "score1": 3,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-13",
+      "stage": "Group G",
+      "team1": "Ecuador",
+      "team2": "Croatia",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-13",
+      "stage": "Group G",
+      "team1": "Mexico",
+      "team2": "Italy",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-14",
+      "stage": "Group H",
+      "team1": "Belgium",
+      "team2": "Russia",
+      "score1": 3,
+      "score2": 2
+    },
+    {
+      "date": "2002-06-14",
+      "stage": "Group H",
+      "team1": "Tunisia",
+      "team2": "Japan",
+      "score1": 0,
+      "score2": 2
+    },
+    {
+      "date": "2002-06-14",
+      "stage": "Group D",
+      "team1": "Poland",
+      "team2": "United States",
+      "score1": 3,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-14",
+      "stage": "Group D",
+      "team1": "Portugal",
+      "team2": "South Korea",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-15",
+      "stage": "Round of 16",
+      "team1": "Germany",
+      "team2": "Paraguay",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-15",
+      "stage": "Round of 16",
+      "team1": "Denmark",
+      "team2": "England",
+      "score1": 0,
+      "score2": 3
+    },
+    {
+      "date": "2002-06-16",
+      "stage": "Round of 16",
+      "team1": "Sweden",
+      "team2": "Senegal",
+      "score1": 1,
+      "score2": 2
+    },
+    {
+      "date": "2002-06-16",
+      "stage": "Round of 16",
+      "team1": "Spain",
+      "team2": "Republic of Ireland",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-17",
+      "stage": "Round of 16",
+      "team1": "Mexico",
+      "team2": "United States",
+      "score1": 0,
+      "score2": 2
+    },
+    {
+      "date": "2002-06-17",
+      "stage": "Round of 16",
+      "team1": "Brazil",
+      "team2": "Belgium",
+      "score1": 2,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-18",
+      "stage": "Round of 16",
+      "team1": "Japan",
+      "team2": "Turkey",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-18",
+      "stage": "Round of 16",
+      "team1": "South Korea",
+      "team2": "Italy",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-21",
+      "stage": "Quarter-finals",
+      "team1": "England",
+      "team2": "Brazil",
+      "score1": 1,
+      "score2": 2
+    },
+    {
+      "date": "2002-06-21",
+      "stage": "Quarter-finals",
+      "team1": "Germany",
+      "team2": "United States",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-22",
+      "stage": "Quarter-finals",
+      "team1": "Spain",
+      "team2": "South Korea",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-22",
+      "stage": "Quarter-finals",
+      "team1": "Senegal",
+      "team2": "Turkey",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "2002-06-25",
+      "stage": "Semi-finals",
+      "team1": "Germany",
+      "team2": "South Korea",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-26",
+      "stage": "Semi-finals",
+      "team1": "Brazil",
+      "team2": "Turkey",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "2002-06-29",
+      "stage": "Third-place match",
+      "team1": "South Korea",
+      "team2": "Turkey",
+      "score1": 2,
+      "score2": 3
+    },
+    {
+      "date": "2002-06-30",
+      "stage": "Final",
+      "team1": "Germany",
+      "team2": "Brazil",
+      "score1": 0,
+      "score2": 2
+    }
+  ]
+}

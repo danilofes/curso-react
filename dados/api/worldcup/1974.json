@@ -1,0 +1,309 @@
+{
+  "year": "1974",
+  "matches": [
+    {
+      "date": "1974-06-13",
+      "stage": "Group 2",
+      "team1": "Brazil",
+      "team2": "Yugoslavia",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "1974-06-14",
+      "stage": "Group 1",
+      "team1": "West Germany",
+      "team2": "Chile",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "1974-06-14",
+      "stage": "Group 1",
+      "team1": "East Germany",
+      "team2": "Australia",
+      "score1": 2,
+      "score2": 0
+    },
+    {
+      "date": "1974-06-14",
+      "stage": "Group 2",
+      "team1": "Zaire",
+      "team2": "Scotland",
+      "score1": 0,
+      "score2": 2
+    },
+    {
+      "date": "1974-06-15",
+      "stage": "Group 3",
+      "team1": "Sweden",
+      "team2": "Bulgaria",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "1974-06-15",
+      "stage": "Group 3",
+      "team1": "Uruguay",
+      "team2": "Netherlands",
+      "score1": 0,
+      "score2": 2
+    },
+    {
+      "date": "1974-06-15",
+      "stage": "Group 4",
+      "team1": "Italy",
+      "team2": "Haiti",
+      "score1": 3,
+      "score2": 1
+    },
+    {
+      "date": "1974-06-15",
+      "stage": "Group 4",
+      "team1": "Poland",
+      "team2": "Argentina",
+      "score1": 3,
+      "score2": 2
+    },
+    {
+      "date": "1974-06-18",
+      "stage": "Group 1",
+      "team1": "Australia",
+      "team2": "West Germany",
+      "score1": 0,
+      "score2": 3
+    },
+    {
+      "date": "1974-06-18",
+      "stage": "Group 1",
+      "team1": "Chile",
+      "team2": "East Germany",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "1974-06-18",
+      "stage": "Group 2",
+      "team1": "Scotland",
+      "team2": "Brazil",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "1974-06-18",
+      "stage": "Group 2",
+      "team1": "Yugoslavia",
+      "team2": "Zaire",
+      "score1": 9,
+      "score2": 0
+    },
+    {
+      "date": "1974-06-19",
+      "stage": "Group 3",
+      "team1": "Bulgaria",
+      "team2": "Uruguay",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "1974-06-19",
+      "stage": "Group 3",
+      "team1": "Netherlands",
+      "team2": "Sweden",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "1974-06-19",
+      "stage": "Group 4",
+      "team1": "Argentina",
+      "team2": "Italy",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "1974-06-19",
+      "stage": "Group 4",
+      "team1": "Haiti",
+      "team2": "Poland",
+      "score1": 0,
+      "score2": 7
+    },
+    {
+      "date": "1974-06-22",
+      "stage": "Group 1",
+      "team1": "Australia",
+      "team2": "Chile",
+      "score1": 0,
+      "score2": 0
+    },
+    {
+      "date": "1974-06-22",
+      "stage": "Group 2",
+      "team1": "Scotland",
+      "team2": "Yugoslavia",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "1974-06-22",
+      "stage": "Group 2",
+      "team1": "Zaire",
+      "team2": "Brazil",
+      "score1": 0,
+      "score2": 3
+    },
+    {
+      "date": "1974-06-22",
+      "stage": "Group 1",
+      "team1": "East Germany",
+      "team2": "West Germany",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "1974-06-23",
+      "stage": "Group 3",
+      "team1": "Bulgaria",
+      "team2": "Netherlands",
+      "score1": 1,
+      "score2": 4
+    },
+    {
+      "date": "1974-06-23",
+      "stage": "Group 3",
+      "team1": "Sweden",
+      "team2": "Uruguay",
+      "score1": 3,
+      "score2": 0
+    },
+    {
+      "date": "1974-06-23",
+      "stage": "Group 4",
+      "team1": "Argentina",
+      "team2": "Haiti",
+      "score1": 4,
+      "score2": 1
+    },
+    {
+      "date": "1974-06-23",
+      "stage": "Group 4",
+      "team1": "Poland",
+      "team2": "Italy",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "1974-06-26",
+      "stage": "Second group stage",
+      "team1": "Yugoslavia",
+      "team2": "West Germany",
+      "score1": 0,
+      "score2": 2
+    },
+    {
+      "date": "1974-06-26",
+      "stage": "Second group stage",
+      "team1": "Brazil",
+      "team2": "East Germany",
+      "score1": 1,
+      "score2": 0
+    },
+    {
+      "date": "1974-06-26",
+      "stage": "Second group stage",
+      "team1": "Netherlands",
+      "team2": "Argentina",
+      "score1": 4,
+      "score2": 0
+    },
+    {
+      "date": "1974-06-26",
+      "stage": "Second group stage",
+      "team1": "Sweden",
+      "team2": "Poland",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "1974-06-30",
+      "stage": "Second group stage",
+      "team1": "Argentina",
+      "team2": "Brazil",
+      "score1": 1,
+      "score2": 2
+    },
+    {
+      "date": "1974-06-30",
+      "stage": "Second group stage",
+      "team1": "East Germany",
+      "team2": "Netherlands",
+      "score1": 0,
+      "score2": 2
+    },
+    {
+      "date": "1974-06-30",
+      "stage": "Second group stage",
+      "team1": "Poland",
+      "team2": "Yugoslavia",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "1974-06-30",
+      "stage": "Second group stage",
+      "team1": "West Germany",
+      "team2": "Sweden",
+      "score1": 4,
+      "score2": 2
+    },
+    {
+      "date": "1974-07-03",
+      "stage": "Second group stage",
+      "team1": "Poland",
+      "team2": "West Germany",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "1974-07-03",
+      "stage": "Second group stage",
+      "team1": "Argentina",
+      "team2": "East Germany",
+      "score1": 1,
+      "score2": 1
+    },
+    {
+      "date": "1974-07-03",
+      "stage": "Second group stage",
+      "team1": "Netherlands",
+      "team2": "Brazil",
+      "score1": 2,
+      "score2": 0
+    },
+    {
+      "date": "1974-07-03",
+      "stage": "Second group stage",
+      "team1": "Sweden",
+      "team2": "Yugoslavia",
+      "score1": 2,
+      "score2": 1
+    },
+    {
+      "date": "1974-07-06",
+      "stage": "Third-place match",
+      "team1": "Brazil",
+      "team2": "Poland",
+      "score1": 0,
+      "score2": 1
+    },
+    {
+      "date": "1974-07-07",
+      "stage": "Final",
+      "team1": "Netherlands",
+      "team2": "West Germany",
+      "score1": 1,
+      "score2": 2
+    }
+  ]
+}

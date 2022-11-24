@@ -48,3 +48,5 @@ useEffect(
   [] // Passar um array vazio é diferente de não passar o segundo parâmetro.
 );
 ```
+
+https://danilofes-curso-react.netlify.app/api/cardapio.json
