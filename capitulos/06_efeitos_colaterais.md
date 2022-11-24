@@ -9,8 +9,7 @@ Nesta seção veremos como fazer isso de forma correta.
 ### O hook `useEffect`
 
 O hook `useEffect` permite que executemos uma função passada como parâmetro, contendo efeito colateral, após a renderização do componente.
-Chamaremos esse tipo de código, a partir de agora, simplesmente de efeito.
-
+Chamaremos esse tipo de código, a partir de agora, simplesmente de **efeito**.
 A forma mais básica de utilizar `useEffect` é:
 
 ```tsx
