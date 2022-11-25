@@ -1,0 +1,514 @@
+[
+  {
+    "date": "2014-06-12",
+    "stage": "Group A",
+    "team1": "Brazil",
+    "team2": "Croatia",
+    "score1": 3,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-13",
+    "stage": "Group A",
+    "team1": "Mexico",
+    "team2": "Cameroon",
+    "score1": 1,
+    "score2": 0
+  },
+  {
+    "date": "2014-06-13",
+    "stage": "Group B",
+    "team1": "Spain",
+    "team2": "Netherlands",
+    "score1": 1,
+    "score2": 5
+  },
+  {
+    "date": "2014-06-13",
+    "stage": "Group B",
+    "team1": "Chile",
+    "team2": "Australia",
+    "score1": 3,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-14",
+    "stage": "Group C",
+    "team1": "Colombia",
+    "team2": "Greece",
+    "score1": 3,
+    "score2": 0
+  },
+  {
+    "date": "2014-06-14",
+    "stage": "Group D",
+    "team1": "Uruguay",
+    "team2": "Costa Rica",
+    "score1": 1,
+    "score2": 3
+  },
+  {
+    "date": "2014-06-14",
+    "stage": "Group D",
+    "team1": "England",
+    "team2": "Italy",
+    "score1": 1,
+    "score2": 2
+  },
+  {
+    "date": "2014-06-14",
+    "stage": "Group C",
+    "team1": "Ivory Coast",
+    "team2": "Japan",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-15",
+    "stage": "Group E",
+    "team1": "Switzerland",
+    "team2": "Ecuador",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-15",
+    "stage": "Group E",
+    "team1": "France",
+    "team2": "Honduras",
+    "score1": 3,
+    "score2": 0
+  },
+  {
+    "date": "2014-06-15",
+    "stage": "Group F",
+    "team1": "Argentina",
+    "team2": "Bosnia and Herzegovina",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-16",
+    "stage": "Group G",
+    "team1": "Germany",
+    "team2": "Portugal",
+    "score1": 4,
+    "score2": 0
+  },
+  {
+    "date": "2014-06-16",
+    "stage": "Group F",
+    "team1": "Iran",
+    "team2": "Nigeria",
+    "score1": 0,
+    "score2": 0
+  },
+  {
+    "date": "2014-06-16",
+    "stage": "Group G",
+    "team1": "Ghana",
+    "team2": "United States",
+    "score1": 1,
+    "score2": 2
+  },
+  {
+    "date": "2014-06-17",
+    "stage": "Group H",
+    "team1": "Belgium",
+    "team2": "Algeria",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-17",
+    "stage": "Group A",
+    "team1": "Brazil",
+    "team2": "Mexico",
+    "score1": 0,
+    "score2": 0
+  },
+  {
+    "date": "2014-06-17",
+    "stage": "Group H",
+    "team1": "Russia",
+    "team2": "South Korea",
+    "score1": 1,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-18",
+    "stage": "Group B",
+    "team1": "Australia",
+    "team2": "Netherlands",
+    "score1": 2,
+    "score2": 3
+  },
+  {
+    "date": "2014-06-18",
+    "stage": "Group B",
+    "team1": "Spain",
+    "team2": "Chile",
+    "score1": 0,
+    "score2": 2
+  },
+  {
+    "date": "2014-06-18",
+    "stage": "Group A",
+    "team1": "Cameroon",
+    "team2": "Croatia",
+    "score1": 0,
+    "score2": 4
+  },
+  {
+    "date": "2014-06-19",
+    "stage": "Group C",
+    "team1": "Colombia",
+    "team2": "Ivory Coast",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-19",
+    "stage": "Group D",
+    "team1": "Uruguay",
+    "team2": "England",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-19",
+    "stage": "Group C",
+    "team1": "Japan",
+    "team2": "Greece",
+    "score1": 0,
+    "score2": 0
+  },
+  {
+    "date": "2014-06-20",
+    "stage": "Group D",
+    "team1": "Italy",
+    "team2": "Costa Rica",
+    "score1": 0,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-20",
+    "stage": "Group E",
+    "team1": "Switzerland",
+    "team2": "France",
+    "score1": 2,
+    "score2": 5
+  },
+  {
+    "date": "2014-06-20",
+    "stage": "Group E",
+    "team1": "Honduras",
+    "team2": "Ecuador",
+    "score1": 1,
+    "score2": 2
+  },
+  {
+    "date": "2014-06-21",
+    "stage": "Group F",
+    "team1": "Argentina",
+    "team2": "Iran",
+    "score1": 1,
+    "score2": 0
+  },
+  {
+    "date": "2014-06-21",
+    "stage": "Group G",
+    "team1": "Germany",
+    "team2": "Ghana",
+    "score1": 2,
+    "score2": 2
+  },
+  {
+    "date": "2014-06-21",
+    "stage": "Group F",
+    "team1": "Nigeria",
+    "team2": "Bosnia and Herzegovina",
+    "score1": 1,
+    "score2": 0
+  },
+  {
+    "date": "2014-06-22",
+    "stage": "Group H",
+    "team1": "Belgium",
+    "team2": "Russia",
+    "score1": 1,
+    "score2": 0
+  },
+  {
+    "date": "2014-06-22",
+    "stage": "Group H",
+    "team1": "South Korea",
+    "team2": "Algeria",
+    "score1": 2,
+    "score2": 4
+  },
+  {
+    "date": "2014-06-22",
+    "stage": "Group G",
+    "team1": "United States",
+    "team2": "Portugal",
+    "score1": 2,
+    "score2": 2
+  },
+  {
+    "date": "2014-06-23",
+    "stage": "Group B",
+    "team1": "Australia",
+    "team2": "Spain",
+    "score1": 0,
+    "score2": 3
+  },
+  {
+    "date": "2014-06-23",
+    "stage": "Group B",
+    "team1": "Netherlands",
+    "team2": "Chile",
+    "score1": 2,
+    "score2": 0
+  },
+  {
+    "date": "2014-06-23",
+    "stage": "Group A",
+    "team1": "Cameroon",
+    "team2": "Brazil",
+    "score1": 1,
+    "score2": 4
+  },
+  {
+    "date": "2014-06-23",
+    "stage": "Group A",
+    "team1": "Croatia",
+    "team2": "Mexico",
+    "score1": 1,
+    "score2": 3
+  },
+  {
+    "date": "2014-06-24",
+    "stage": "Group D",
+    "team1": "Costa Rica",
+    "team2": "England",
+    "score1": 0,
+    "score2": 0
+  },
+  {
+    "date": "2014-06-24",
+    "stage": "Group D",
+    "team1": "Italy",
+    "team2": "Uruguay",
+    "score1": 0,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-24",
+    "stage": "Group C",
+    "team1": "Japan",
+    "team2": "Colombia",
+    "score1": 1,
+    "score2": 4
+  },
+  {
+    "date": "2014-06-24",
+    "stage": "Group C",
+    "team1": "Greece",
+    "team2": "Ivory Coast",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-25",
+    "stage": "Group F",
+    "team1": "Bosnia and Herzegovina",
+    "team2": "Iran",
+    "score1": 3,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-25",
+    "stage": "Group F",
+    "team1": "Nigeria",
+    "team2": "Argentina",
+    "score1": 2,
+    "score2": 3
+  },
+  {
+    "date": "2014-06-25",
+    "stage": "Group E",
+    "team1": "Honduras",
+    "team2": "Switzerland",
+    "score1": 0,
+    "score2": 3
+  },
+  {
+    "date": "2014-06-25",
+    "stage": "Group E",
+    "team1": "Ecuador",
+    "team2": "France",
+    "score1": 0,
+    "score2": 0
+  },
+  {
+    "date": "2014-06-26",
+    "stage": "Group G",
+    "team1": "Portugal",
+    "team2": "Ghana",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-26",
+    "stage": "Group G",
+    "team1": "United States",
+    "team2": "Germany",
+    "score1": 0,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-26",
+    "stage": "Group H",
+    "team1": "Algeria",
+    "team2": "Russia",
+    "score1": 1,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-26",
+    "stage": "Group H",
+    "team1": "South Korea",
+    "team2": "Belgium",
+    "score1": 0,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-28",
+    "stage": "Round of 16",
+    "team1": "Brazil",
+    "team2": "Chile",
+    "score1": 1,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-28",
+    "stage": "Round of 16",
+    "team1": "Colombia",
+    "team2": "Uruguay",
+    "score1": 2,
+    "score2": 0
+  },
+  {
+    "date": "2014-06-29",
+    "stage": "Round of 16",
+    "team1": "Netherlands",
+    "team2": "Mexico",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-29",
+    "stage": "Round of 16",
+    "team1": "Costa Rica",
+    "team2": "Greece",
+    "score1": 1,
+    "score2": 1
+  },
+  {
+    "date": "2014-06-30",
+    "stage": "Round of 16",
+    "team1": "France",
+    "team2": "Nigeria",
+    "score1": 2,
+    "score2": 0
+  },
+  {
+    "date": "2014-06-30",
+    "stage": "Round of 16",
+    "team1": "Germany",
+    "team2": "Algeria",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "2014-07-01",
+    "stage": "Round of 16",
+    "team1": "Argentina",
+    "team2": "Switzerland",
+    "score1": 1,
+    "score2": 0
+  },
+  {
+    "date": "2014-07-01",
+    "stage": "Round of 16",
+    "team1": "Belgium",
+    "team2": "United States",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "2014-07-04",
+    "stage": "Quarter-finals",
+    "team1": "France",
+    "team2": "Germany",
+    "score1": 0,
+    "score2": 1
+  },
+  {
+    "date": "2014-07-04",
+    "stage": "Quarter-finals",
+    "team1": "Brazil",
+    "team2": "Colombia",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "2014-07-05",
+    "stage": "Quarter-finals",
+    "team1": "Argentina",
+    "team2": "Belgium",
+    "score1": 1,
+    "score2": 0
+  },
+  {
+    "date": "2014-07-05",
+    "stage": "Quarter-finals",
+    "team1": "Netherlands",
+    "team2": "Costa Rica",
+    "score1": 0,
+    "score2": 0
+  },
+  {
+    "date": "2014-07-08",
+    "stage": "Semi-finals",
+    "team1": "Brazil",
+    "team2": "Germany",
+    "score1": 1,
+    "score2": 7
+  },
+  {
+    "date": "2014-07-09",
+    "stage": "Semi-finals",
+    "team1": "Netherlands",
+    "team2": "Argentina",
+    "score1": 0,
+    "score2": 0
+  },
+  {
+    "date": "2014-07-12",
+    "stage": "Third-place match",
+    "team1": "Brazil",
+    "team2": "Netherlands",
+    "score1": 0,
+    "score2": 3
+  },
+  {
+    "date": "2014-07-13",
+    "stage": "Final",
+    "team1": "Germany",
+    "team2": "Argentina",
+    "score1": 1,
+    "score2": 0
+  }
+]

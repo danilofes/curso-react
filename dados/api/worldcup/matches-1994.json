@@ -1,0 +1,411 @@
+[
+  {
+    "date": "1994-06-17",
+    "stage": "Group C",
+    "team1": "Germany",
+    "team2": "Bolivia",
+    "score1": 1,
+    "score2": 0
+  },
+  {
+    "date": "1994-06-17",
+    "stage": "Group C",
+    "team1": "Spain",
+    "team2": "South Korea",
+    "score1": 2,
+    "score2": 2
+  },
+  {
+    "date": "1994-06-18",
+    "stage": "Group A",
+    "team1": "United States",
+    "team2": "Switzerland",
+    "score1": 1,
+    "score2": 1
+  },
+  {
+    "date": "1994-06-18",
+    "stage": "Group E",
+    "team1": "Italy",
+    "team2": "Republic of Ireland",
+    "score1": 0,
+    "score2": 1
+  },
+  {
+    "date": "1994-06-18",
+    "stage": "Group A",
+    "team1": "Colombia",
+    "team2": "Romania",
+    "score1": 1,
+    "score2": 3
+  },
+  {
+    "date": "1994-06-19",
+    "stage": "Group F",
+    "team1": "Belgium",
+    "team2": "Morocco",
+    "score1": 1,
+    "score2": 0
+  },
+  {
+    "date": "1994-06-19",
+    "stage": "Group E",
+    "team1": "Norway",
+    "team2": "Mexico",
+    "score1": 1,
+    "score2": 0
+  },
+  {
+    "date": "1994-06-19",
+    "stage": "Group B",
+    "team1": "Cameroon",
+    "team2": "Sweden",
+    "score1": 2,
+    "score2": 2
+  },
+  {
+    "date": "1994-06-20",
+    "stage": "Group B",
+    "team1": "Brazil",
+    "team2": "Russia",
+    "score1": 2,
+    "score2": 0
+  },
+  {
+    "date": "1994-06-20",
+    "stage": "Group F",
+    "team1": "Netherlands",
+    "team2": "Saudi Arabia",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "1994-06-21",
+    "stage": "Group D",
+    "team1": "Argentina",
+    "team2": "Greece",
+    "score1": 4,
+    "score2": 0
+  },
+  {
+    "date": "1994-06-21",
+    "stage": "Group C",
+    "team1": "Germany",
+    "team2": "Spain",
+    "score1": 1,
+    "score2": 1
+  },
+  {
+    "date": "1994-06-21",
+    "stage": "Group D",
+    "team1": "Nigeria",
+    "team2": "Bulgaria",
+    "score1": 3,
+    "score2": 0
+  },
+  {
+    "date": "1994-06-22",
+    "stage": "Group A",
+    "team1": "Romania",
+    "team2": "Switzerland",
+    "score1": 1,
+    "score2": 4
+  },
+  {
+    "date": "1994-06-22",
+    "stage": "Group A",
+    "team1": "United States",
+    "team2": "Colombia",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "1994-06-23",
+    "stage": "Group E",
+    "team1": "Italy",
+    "team2": "Norway",
+    "score1": 1,
+    "score2": 0
+  },
+  {
+    "date": "1994-06-23",
+    "stage": "Group C",
+    "team1": "South Korea",
+    "team2": "Bolivia",
+    "score1": 0,
+    "score2": 0
+  },
+  {
+    "date": "1994-06-24",
+    "stage": "Group E",
+    "team1": "Mexico",
+    "team2": "Republic of Ireland",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "1994-06-24",
+    "stage": "Group B",
+    "team1": "Brazil",
+    "team2": "Cameroon",
+    "score1": 3,
+    "score2": 0
+  },
+  {
+    "date": "1994-06-24",
+    "stage": "Group B",
+    "team1": "Sweden",
+    "team2": "Russia",
+    "score1": 3,
+    "score2": 1
+  },
+  {
+    "date": "1994-06-25",
+    "stage": "Group F",
+    "team1": "Belgium",
+    "team2": "Netherlands",
+    "score1": 1,
+    "score2": 0
+  },
+  {
+    "date": "1994-06-25",
+    "stage": "Group F",
+    "team1": "Saudi Arabia",
+    "team2": "Morocco",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "1994-06-25",
+    "stage": "Group D",
+    "team1": "Argentina",
+    "team2": "Nigeria",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "1994-06-26",
+    "stage": "Group D",
+    "team1": "Bulgaria",
+    "team2": "Greece",
+    "score1": 4,
+    "score2": 0
+  },
+  {
+    "date": "1994-06-26",
+    "stage": "Group A",
+    "team1": "Switzerland",
+    "team2": "Colombia",
+    "score1": 0,
+    "score2": 2
+  },
+  {
+    "date": "1994-06-26",
+    "stage": "Group A",
+    "team1": "United States",
+    "team2": "Romania",
+    "score1": 0,
+    "score2": 1
+  },
+  {
+    "date": "1994-06-27",
+    "stage": "Group C",
+    "team1": "Bolivia",
+    "team2": "Spain",
+    "score1": 1,
+    "score2": 3
+  },
+  {
+    "date": "1994-06-27",
+    "stage": "Group C",
+    "team1": "Germany",
+    "team2": "South Korea",
+    "score1": 3,
+    "score2": 2
+  },
+  {
+    "date": "1994-06-28",
+    "stage": "Group E",
+    "team1": "Italy",
+    "team2": "Mexico",
+    "score1": 1,
+    "score2": 1
+  },
+  {
+    "date": "1994-06-28",
+    "stage": "Group E",
+    "team1": "Republic of Ireland",
+    "team2": "Norway",
+    "score1": 0,
+    "score2": 0
+  },
+  {
+    "date": "1994-06-28",
+    "stage": "Group B",
+    "team1": "Russia",
+    "team2": "Cameroon",
+    "score1": 6,
+    "score2": 1
+  },
+  {
+    "date": "1994-06-28",
+    "stage": "Group B",
+    "team1": "Brazil",
+    "team2": "Sweden",
+    "score1": 1,
+    "score2": 1
+  },
+  {
+    "date": "1994-06-29",
+    "stage": "Group F",
+    "team1": "Belgium",
+    "team2": "Saudi Arabia",
+    "score1": 0,
+    "score2": 1
+  },
+  {
+    "date": "1994-06-29",
+    "stage": "Group F",
+    "team1": "Morocco",
+    "team2": "Netherlands",
+    "score1": 1,
+    "score2": 2
+  },
+  {
+    "date": "1994-06-30",
+    "stage": "Group D",
+    "team1": "Argentina",
+    "team2": "Bulgaria",
+    "score1": 0,
+    "score2": 2
+  },
+  {
+    "date": "1994-06-30",
+    "stage": "Group D",
+    "team1": "Greece",
+    "team2": "Nigeria",
+    "score1": 0,
+    "score2": 2
+  },
+  {
+    "date": "1994-07-02",
+    "stage": "Round of 16",
+    "team1": "Germany",
+    "team2": "Belgium",
+    "score1": 3,
+    "score2": 2
+  },
+  {
+    "date": "1994-07-02",
+    "stage": "Round of 16",
+    "team1": "Spain",
+    "team2": "Switzerland",
+    "score1": 3,
+    "score2": 0
+  },
+  {
+    "date": "1994-07-03",
+    "stage": "Round of 16",
+    "team1": "Saudi Arabia",
+    "team2": "Sweden",
+    "score1": 1,
+    "score2": 3
+  },
+  {
+    "date": "1994-07-03",
+    "stage": "Round of 16",
+    "team1": "Romania",
+    "team2": "Argentina",
+    "score1": 3,
+    "score2": 2
+  },
+  {
+    "date": "1994-07-04",
+    "stage": "Round of 16",
+    "team1": "Netherlands",
+    "team2": "Republic of Ireland",
+    "score1": 2,
+    "score2": 0
+  },
+  {
+    "date": "1994-07-04",
+    "stage": "Round of 16",
+    "team1": "Brazil",
+    "team2": "United States",
+    "score1": 1,
+    "score2": 0
+  },
+  {
+    "date": "1994-07-05",
+    "stage": "Round of 16",
+    "team1": "Nigeria",
+    "team2": "Italy",
+    "score1": 1,
+    "score2": 2
+  },
+  {
+    "date": "1994-07-05",
+    "stage": "Round of 16",
+    "team1": "Mexico",
+    "team2": "Bulgaria",
+    "score1": 1,
+    "score2": 1
+  },
+  {
+    "date": "1994-07-09",
+    "stage": "Quarter-finals",
+    "team1": "Italy",
+    "team2": "Spain",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "1994-07-09",
+    "stage": "Quarter-finals",
+    "team1": "Netherlands",
+    "team2": "Brazil",
+    "score1": 2,
+    "score2": 3
+  },
+  {
+    "date": "1994-07-10",
+    "stage": "Quarter-finals",
+    "team1": "Bulgaria",
+    "team2": "Germany",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "1994-07-10",
+    "stage": "Quarter-finals",
+    "team1": "Romania",
+    "team2": "Sweden",
+    "score1": 2,
+    "score2": 2
+  },
+  {
+    "date": "1994-07-13",
+    "stage": "Semi-finals",
+    "team1": "Bulgaria",
+    "team2": "Italy",
+    "score1": 1,
+    "score2": 2
+  },
+  {
+    "date": "1994-07-13",
+    "stage": "Semi-finals",
+    "team1": "Sweden",
+    "team2": "Brazil",
+    "score1": 0,
+    "score2": 1
+  },
+  {
+    "date": "1994-07-16",
+    "stage": "Third-place match",
+    "team1": "Sweden",
+    "team2": "Bulgaria",
+    "score1": 4,
+    "score2": 0
+  },
+  { "date": "1994-07-17", "stage": "Final", "team1": "Brazil", "team2": "Italy", "score1": 0, "score2": 0 }
+]

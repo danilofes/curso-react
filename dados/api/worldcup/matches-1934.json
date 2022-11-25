@@ -1,0 +1,138 @@
+[
+  {
+    "date": "1934-05-27",
+    "stage": "Round of 16",
+    "team1": "Austria",
+    "team2": "France",
+    "score1": 3,
+    "score2": 2
+  },
+  {
+    "date": "1934-05-27",
+    "stage": "Round of 16",
+    "team1": "Czechoslovakia",
+    "team2": "Romania",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "1934-05-27",
+    "stage": "Round of 16",
+    "team1": "Germany",
+    "team2": "Belgium",
+    "score1": 5,
+    "score2": 2
+  },
+  {
+    "date": "1934-05-27",
+    "stage": "Round of 16",
+    "team1": "Hungary",
+    "team2": "Egypt",
+    "score1": 4,
+    "score2": 2
+  },
+  {
+    "date": "1934-05-27",
+    "stage": "Round of 16",
+    "team1": "Italy",
+    "team2": "United States",
+    "score1": 7,
+    "score2": 1
+  },
+  {
+    "date": "1934-05-27",
+    "stage": "Round of 16",
+    "team1": "Spain",
+    "team2": "Brazil",
+    "score1": 3,
+    "score2": 1
+  },
+  {
+    "date": "1934-05-27",
+    "stage": "Round of 16",
+    "team1": "Sweden",
+    "team2": "Argentina",
+    "score1": 3,
+    "score2": 2
+  },
+  {
+    "date": "1934-05-27",
+    "stage": "Round of 16",
+    "team1": "Switzerland",
+    "team2": "Netherlands",
+    "score1": 3,
+    "score2": 2
+  },
+  {
+    "date": "1934-05-31",
+    "stage": "Quarter-finals",
+    "team1": "Austria",
+    "team2": "Hungary",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "1934-05-31",
+    "stage": "Quarter-finals",
+    "team1": "Czechoslovakia",
+    "team2": "Switzerland",
+    "score1": 3,
+    "score2": 2
+  },
+  {
+    "date": "1934-05-31",
+    "stage": "Quarter-finals",
+    "team1": "Germany",
+    "team2": "Sweden",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "1934-05-31",
+    "stage": "Quarter-finals",
+    "team1": "Italy",
+    "team2": "Spain",
+    "score1": 1,
+    "score2": 1
+  },
+  {
+    "date": "1934-06-01",
+    "stage": "Quarter-finals",
+    "team1": "Italy",
+    "team2": "Spain",
+    "score1": 1,
+    "score2": 0
+  },
+  {
+    "date": "1934-06-03",
+    "stage": "Semi-finals",
+    "team1": "Czechoslovakia",
+    "team2": "Germany",
+    "score1": 3,
+    "score2": 1
+  },
+  {
+    "date": "1934-06-03",
+    "stage": "Semi-finals",
+    "team1": "Italy",
+    "team2": "Austria",
+    "score1": 1,
+    "score2": 0
+  },
+  {
+    "date": "1934-06-07",
+    "stage": "Third-place match",
+    "team1": "Germany",
+    "team2": "Austria",
+    "score1": 3,
+    "score2": 2
+  },
+  {
+    "date": "1934-06-10",
+    "stage": "Final",
+    "team1": "Italy",
+    "team2": "Czechoslovakia",
+    "score1": 2,
+    "score2": 1
+  }
+]

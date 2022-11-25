@@ -1,0 +1,139 @@
+[
+  {
+    "date": "1938-06-04",
+    "stage": "Round of 16",
+    "team1": "Switzerland",
+    "team2": "Germany",
+    "score1": 1,
+    "score2": 1
+  },
+  {
+    "date": "1938-06-05",
+    "stage": "Round of 16",
+    "team1": "Cuba",
+    "team2": "Romania",
+    "score1": 3,
+    "score2": 3
+  },
+  {
+    "date": "1938-06-05",
+    "stage": "Round of 16",
+    "team1": "France",
+    "team2": "Belgium",
+    "score1": 3,
+    "score2": 1
+  },
+  {
+    "date": "1938-06-05",
+    "stage": "Round of 16",
+    "team1": "Hungary",
+    "team2": "Dutch East Indies",
+    "score1": 6,
+    "score2": 0
+  },
+  {
+    "date": "1938-06-05",
+    "stage": "Round of 16",
+    "team1": "Italy",
+    "team2": "Norway",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "1938-06-05",
+    "stage": "Round of 16",
+    "team1": "Brazil",
+    "team2": "Poland",
+    "score1": 6,
+    "score2": 5
+  },
+  {
+    "date": "1938-06-05",
+    "stage": "Round of 16",
+    "team1": "Czechoslovakia",
+    "team2": "Netherlands",
+    "score1": 3,
+    "score2": 0
+  },
+  {
+    "date": "1938-06-09",
+    "stage": "Round of 16",
+    "team1": "Cuba",
+    "team2": "Romania",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "1938-06-09",
+    "stage": "Round of 16",
+    "team1": "Switzerland",
+    "team2": "Germany",
+    "score1": 4,
+    "score2": 2
+  },
+  {
+    "date": "1938-06-12",
+    "stage": "Quarter-finals",
+    "team1": "Brazil",
+    "team2": "Czechoslovakia",
+    "score1": 1,
+    "score2": 1
+  },
+  {
+    "date": "1938-06-12",
+    "stage": "Quarter-finals",
+    "team1": "Hungary",
+    "team2": "Switzerland",
+    "score1": 2,
+    "score2": 0
+  },
+  {
+    "date": "1938-06-12",
+    "stage": "Quarter-finals",
+    "team1": "Italy",
+    "team2": "France",
+    "score1": 3,
+    "score2": 1
+  },
+  {
+    "date": "1938-06-12",
+    "stage": "Quarter-finals",
+    "team1": "Sweden",
+    "team2": "Cuba",
+    "score1": 8,
+    "score2": 0
+  },
+  {
+    "date": "1938-06-14",
+    "stage": "Quarter-finals",
+    "team1": "Brazil",
+    "team2": "Czechoslovakia",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "1938-06-16",
+    "stage": "Semi-finals",
+    "team1": "Hungary",
+    "team2": "Sweden",
+    "score1": 5,
+    "score2": 1
+  },
+  {
+    "date": "1938-06-16",
+    "stage": "Semi-finals",
+    "team1": "Italy",
+    "team2": "Brazil",
+    "score1": 2,
+    "score2": 1
+  },
+  {
+    "date": "1938-06-19",
+    "stage": "Third-place match",
+    "team1": "Brazil",
+    "team2": "Sweden",
+    "score1": 4,
+    "score2": 2
+  },
+  { "date": "1938-06-19", "stage": "Final", "team1": "Italy", "team2": "Hungary", "score1": 4, "score2": 2 }
+]
