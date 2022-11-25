@@ -75,9 +75,13 @@ Por exemplo, carregando a URL `https://danilofes-curso-react.netlify.app/api/wor
 ]
 ```
 
+A interface da aplicação deve possuir um `select` para escolher o ano da copa do mundo (inicialmente virá marcado 2018).
+As partidas da copa devem ser carregadas e exibidas no componente, e sempre que mudar o ano no `select`, devemos recarregá-las.
 A aplicação final ficaria da seguinte assim:
 
 <iframe src="https://cralmg-world-cup-matches.stackblitz.io" style="border:4px solid #ddd; width:600px; height:600px; margin: 1rem 0"></iframe>
+
+Abaixo temos o código-fonte da implementação:
 
 ```tsx
 import { useState, useEffect } from "react";
