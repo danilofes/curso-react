@@ -86,7 +86,7 @@ Abaixo temos o código-fonte da implementação:
 ```tsx
 import { useState, useEffect } from "react";
 
-// Interface para descrever o objeto que vem no JSON
+// Interface para descrever os objetos retornados pela API
 interface Match {
   date: string;
   stage: string;
@@ -105,7 +105,7 @@ export default function WorldCupApp() {
   // Estado para armazenar a lista de partidas carregada.
   const [matches, setMatches] = useState<Match[]>([]);
   useEffect(() => {
-    // Carrega as partidas e armazena o resultado no estado. Recarrega se year mudar
+    // Carrega as partidas e armazena o resultado no estado. Recarrega se year mudar.
     fetchWorldCupMatches(year).then((data) => setMatches(data));
   }, [year]);
 
@@ -150,3 +150,21 @@ async function fetchWorldCupMatches(year: string): Promise<Match[]> {
   }
 }
 ```
+
+A parte mais relevante do código está no trecho a seguir, no qual definimos o estado `matches` para armazenar a lista de partidas e definimos um efeito para carregá-las da API:
+
+```tsx
+// Estado para armazenar a lista de partidas carregada.
+const [matches, setMatches] = useState<Match[]>([]);
+useEffect(() => {
+  // Carrega as partidas e armazena o resultado no estado. Recarrega se year mudar.
+  fetchWorldCupMatches(year).then((data) => setMatches(data));
+}, [year]);
+```
+
+Tal código resulta no seguinte comportamento na aplicação:
+
+1. O componente é renderizado pela primeira vez usando o valor inicial de `matches`, que é um _array_ vazio.
+2. Após a primeira renderização, o efeito é executado e a função `fetchWorldCupMatches` é chamada com o valor inicial de `year` (2018). Ou seja, neste momento uma requisição HTTP será disparada, mas como ela ocorre de maneira assíncrona, a execução do efeito termina antes de chegar a resposta.
+3. Quando chegar a resposta da requisição, o callback `(data) => setMatches(data)` será executado e portanto o estado do componente será alterado. Isso disparará um novo processo de renderização.
+4. O componente é renderizado pela segunda vez usando o novo valor de `matches`, que agora contém os dados carregados. O efeito NÃO será executado após esta renderização pois o valor de `year` não mudou desde a última renderização.
