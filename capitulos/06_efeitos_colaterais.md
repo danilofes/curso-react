@@ -49,7 +49,7 @@ useEffect(
 );
 ```
 
-### Exemplo de `useEffect` para carregamento de dados
+### Efeito para carregamento de dados
 
 Para exercitar o carregamento de dados, vamos construir uma aplicação para exibir as partidas das copa do mundo, buscando os dados de uma API (em formato JSON).
 A API que usaremos está disponível na seguinte URL:
@@ -81,7 +81,7 @@ A aplicação final ficaria da seguinte assim:
 
 <iframe src="https://cralmg-world-cup-matches.stackblitz.io" style="border:4px solid #ddd; width:600px; height:600px; margin: 1rem 0"></iframe>
 
-Abaixo temos o código-fonte da implementação:
+Abaixo temos o código-fonte da implementação.
 
 ```tsx
 import { useState, useEffect } from "react";
@@ -99,15 +99,20 @@ interface Match {
 const years = ["1982", "1986", "1990", "1994", "1998", "2002", "2006", "2010", "2014", "2018"];
 
 export default function WorldCupApp() {
-  // Estado para armazenar o valor do select
+  // Estado para armazenar o valor do select.
   const [year, setYear] = useState("2018");
 
-  // Estado para armazenar a lista de partidas carregada.
+  // Estado para armazenar a lista de partidas.
   const [matches, setMatches] = useState<Match[]>([]);
-  useEffect(() => {
-    // Carrega as partidas e armazena o resultado no estado. Recarrega se year mudar.
-    fetchWorldCupMatches(year).then((data) => setMatches(data));
-  }, [year]);
+
+  // Efeito que carrega os dados da API.
+  useEffect(
+    () => {
+      // Carrega as partidas e armazena o resultado no estado.
+      fetchWorldCupMatches(year).then((data) => setMatches(data));
+    },
+    [year] // Recarrega se year mudar.
+  );
 
   return (
     <div>
@@ -154,17 +159,62 @@ async function fetchWorldCupMatches(year: string): Promise<Match[]> {
 A parte mais relevante do código está no trecho a seguir, no qual definimos o estado `matches` para armazenar a lista de partidas e definimos um efeito para carregá-las da API:
 
 ```tsx
-// Estado para armazenar a lista de partidas carregada.
+// Estado para armazenar a lista de partidas.
 const [matches, setMatches] = useState<Match[]>([]);
-useEffect(() => {
-  // Carrega as partidas e armazena o resultado no estado. Recarrega se year mudar.
-  fetchWorldCupMatches(year).then((data) => setMatches(data));
-}, [year]);
+
+// Efeito que carrega os dados da API.
+useEffect(
+  () => {
+    // Carrega as partidas e armazena o resultado no estado.
+    fetchWorldCupMatches(year).then((data) => setMatches(data));
+  },
+  [year] // Recarrega se year mudar.
+);
 ```
 
-Tal código resulta no seguinte comportamento na aplicação:
+Tal código resulta no seguinte comportamento:
 
 1. O componente é renderizado pela primeira vez usando o valor inicial de `matches`, que é um _array_ vazio.
-2. Após a primeira renderização, o efeito é executado e a função `fetchWorldCupMatches` é chamada com o valor inicial de `year` (2018). Ou seja, neste momento uma requisição HTTP será disparada, mas como ela ocorre de maneira assíncrona, a execução do efeito termina antes de chegar a resposta.
+2. Após a primeira renderização, o efeito é executado e a função `fetchWorldCupMatches` é chamada com o valor inicial de `year` (2018). Ou seja, neste momento uma requisição HTTP será disparada, mas, como ela ocorre de maneira assíncrona, a execução do efeito termina antes de chegar a resposta.
 3. Quando chegar a resposta da requisição, o callback `(data) => setMatches(data)` será executado e portanto o estado do componente será alterado. Isso disparará um novo processo de renderização.
-4. O componente é renderizado pela segunda vez usando o novo valor de `matches`, que agora contém os dados carregados. O efeito NÃO será executado após esta renderização pois o valor de `year` não mudou desde a última renderização.
+4. O componente é renderizado novamente usando o novo valor de `matches`, que agora contém os dados carregados. O efeito NÃO será executado após esta renderização pois o valor de `year` não mudou desde a última renderização.
+
+Sempre que o valor de `year` for alterado, uma nova renderização será disparada e os passos 2, 3 e 4 serão repetidos.
+O restante do componente utiliza conceitos que já vimos.
+
+### Efeito com código de limpeza
+
+A função que passamos como primeiro parâmetro do `useEffect` pode, opcionalmente, retornar uma função de limpeza.
+Esta função é executada em duas situações:
+
+- antes da execução do efeito, se ele já tiver executado alguma vez;
+- ou quando o componente é desmontado (ou seja, quando ele é removido do DOM).
+
+Tal função é muito útil quando fazemos algo no efeito que precisa ser desfeito, por exemplo, registrar um tratador de eventos ou temporizador.
+
+No componente `DigitalClock` a seguir exibimos um relógio que é atualizado a cada segundo.
+Para isso usamos um efeito que chama `setInterval` para criar um temporizador e chamamos `clearInterval` na função de limpeza retornada pelo efeito.
+
+```tsx
+export default function DigitalClock() {
+  const [time, setTime] = useState(getCurrentTime());
+
+  useEffect(() => {
+    // Atualiza a hora a cada 1s.
+    const intervalId = setInterval(() => {
+      setTime(getCurrentTime());
+    }, 1000);
+
+    // Devemos chamar clearInterval no código de limpeza para desfazer o setInterval.
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+  return <span>{time}</span>;
+}
+
+function getCurrentTime(): string {
+  return new Date().toLocaleTimeString();
+}
+```

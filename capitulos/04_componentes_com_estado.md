@@ -101,6 +101,7 @@ root.render(<MeuComponente />);
 A partir daí, o React vai chamar a função `MeuComponente`, que retorna uma árvore de elementos React.
 Esta árvore de elementos é chamada de _virtual DOM_, pois trata-se de uma representação dos elementos que serão inseridos no DOM, mas que ainda não são elementos reais.
 O React então transforma o virtual DOM em elementos HTML e os adiciona ao DOM, completando a renderização.
+Neste momento, dizemos que o componente `MeuComponente` está montado.
 
 Se `MeuComponente` não tiver estado, a renderização inicial será a primeira e única.
 No entanto, supondo que `MeuComponente` possua estado, a cada mudança de estado o React dispara um novo processo de renderização.
