@@ -138,4 +138,3 @@ Note que o _hook_ `useInterval` é usado dentro do hook `useCurrentTime`, que po
 Isto é permitido.
 Na prática, as chamadas a `useState` e `useEffect`, ainda que sejam feitas indiretamente, estarão associadas à instância do componente `DigitalClock`.
 As regras dos _hooks_ garantem que elas sejam chamadas sempre na mesma ordem.
-Concluindo, _hooks_ customizados são uma abstração poderosa para reutilizar código e simplificar nossos componentes.
