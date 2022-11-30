@@ -182,6 +182,14 @@ Tal código resulta no seguinte comportamento:
 Sempre que o valor de `year` for alterado, uma nova renderização será disparada e os passos 2, 3 e 4 serão repetidos.
 O restante do componente utiliza conceitos que já vimos.
 
+:::info
+**Nota:**
+Além do `useEffect` o React oferece o _hook_ `useLayoutEffect` como alternativa para executar efeitos após a renderização.
+A diferença entre eles é bastante sutil, `useLayoutEffect` executa o efeito após atualizar o DOM, mas antes do navegador exibir as mudanças (fazer _repaint_).
+Isso torna `useLayoutEffect` útil para casos no qual o efeito altera o DOM diretamente e não desejamos que o navegador faça _repaint_ duas vezes na mesma renderização.
+No entanto, a maioria dos efeitos que uma aplicação tipicamente necessita podem ser implementados com `useEffect`.
+:::
+
 ### Efeito com código de limpeza
 
 A função que passamos como primeiro parâmetro do `useEffect` pode, opcionalmente, retornar uma função de limpeza.
