@@ -138,3 +138,55 @@ Note que o _hook_ `useInterval` é usado dentro do hook `useCurrentTime`, que po
 Isto é permitido.
 Na prática, as chamadas a `useState` e `useEffect`, ainda que sejam feitas indiretamente, estarão associadas à instância do componente `DigitalClock`.
 As regras dos _hooks_ garantem que elas sejam chamadas sempre na mesma ordem.
+
+### Componentes baseados em classes
+
+Antes da API de _hooks_, a única forma de criar componentes React contendo estado era por meio de classes JavaScript/TypeScript.
+Nós não nos aprofundaremos neste tipo de componente pois esta não é mais a maneira recomendada de desenvolver.
+No entanto, é interessante conhecer minimamente componentes baseados em classe para entender código-fonte legado.
+A seguir, temos um exemplo do mesmo componente `Counter` da seção Componentes com Estado, agora definido como classe.
+
+```tsx
+export default class Counter extends React.Component<{}, { counter: number }> {
+  constructor(props: {}) {
+    super(props);
+    this.state = { counter: 0 };
+  }
+
+  increment() {
+    this.setState({ counter: this.state.counter + 1 });
+  }
+
+  reset() {
+    this.setState({ counter: 0 });
+  }
+
+  render() {
+    return (
+      <div>
+        <div>Valor: {this.state.counter}</div>
+        <button onClick={() => this.increment()}>Incrementar</button>
+        <button onClick={() => this.reset()}>Reiniciar</button>
+      </div>
+    );
+  }
+}
+```
+
+É importante observar que:
+
+- Devemos estender React.Component.
+- No construtor, recebemos `props` como parâmetro e devemos chamar o construtor da superclasse repassando `props`.
+- O estado é armazenado no atributo `state` e deve ser alterado sempre chamando-se o método `setState`.
+- A renderização do componente é feita pelo método `render`.
+
+#### Ciclo de vida do componente baseado em classes
+
+Podemos realizar determinadas ações em momentos específicos do ciclo de vida do componente ao
+sobrescrever métodos específicos.
+Dentre eles, destacamos os mais comuns:
+
+- `componentDidMount()`: chamado uma vez, após a primeira renderização do componente.
+- `componentWillUnmount()`: chamado uma vez, antes do componente ser desmontado.
+- `componentDidUpdate(prevProps, prevState)`: chamado toda vez que o componente é atualizado, ou seja, quando há mudanças no `props` ou no `state`.
+  Esse método recebe como parâmetro os valores antigos de `props` e `state`.

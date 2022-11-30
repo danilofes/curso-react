@@ -54,7 +54,12 @@ Esta função recebe como parâmetro um valor inicial a ser armazenado (neste ca
 
 No linha de código acima, usamos desestruturação para atribuir estes valores às variáveis `counter` e `setConter`, respectivamente.
 Podemos armazenar tanto tipos primitivos quanto objetos no estado.
+
+:::info
+**Nota:**
 O compilador TypeScript é capaz de inferir o tipo armazenado no estado com base no valor inicial informado (neste caso um `number`).
+No entanto, `useState` recebe um tipo parametrizado se desejarmos informá-lo explicitamente, por exemplo `useState<number>(0)`.
+:::
 
 Após declarar o estado, definimos a função `increment`:
 
