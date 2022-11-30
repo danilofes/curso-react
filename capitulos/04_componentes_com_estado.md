@@ -175,3 +175,48 @@ De fato, para trabalhar com estado em React, devemos abraçar o conceito de imut
 Tipos primitivos como `number` ou `string` são inerentemente imutáveis (é impossível mudar seu conteúdo sem criar um novo valor).
 Em contraste, objetos (e _arrays_) são mutáveis, mas **nunca devemos alterá-los**.
 Crie um novo objeto (ou _array_) com as alterações desejadas.
+
+### Atualizando estado via função
+
+A função de atualização do estado, além de receber um valor, alternativamente pode receber uma função de atualização.
+Neste caso, a função recebe como parâmetro o valor anterior do estado e deve retornar o novo valor.
+Por exemplo, poderíamos redefinir as funções `increment` e `reset` do componente `Counter` da seguinte forma:
+
+```tsx
+const [counter, setCounter] = useState(0);
+
+function increment() {
+  setCounter((prev) => prev + 1);
+}
+
+function reset() {
+  setCounter((prev) => 0);
+}
+```
+
+Neste cenário não há problema em usar qualquer uma das duas formas, o comportamento será o mesmo.
+Porém, imagine uma situação hipotética na qual a ação de incrementar ocorre após aguardar um determinado tempo.
+
+```tsx
+const [counter, setCounter] = useState(0);
+
+function incrementDelayed() {
+  setTimeout(() => {
+    setCounter(counter + 1); // PERIGO: counter contém o valor do estado no momento que setTimeout foi chamado.
+  }, 1000);
+}
+```
+
+A solução acima não é correta, pois o valor da variável `counter` corresponde ao valor do estado no momento que o timer foi configurado, não no momento que o timer foi disparado.
+Ou seja, seu valor pode estar desatualizado com relação a renderização mais recente do componente.
+Sendo assim, a solução correta seria:
+
+```tsx
+function incrementDelayed() {
+  setTimeout(() => {
+    setCounter((prev) => prev + 1);
+  }, 1000);
+}
+```
+
+De forma geral, toda atualização de estado que depende do valor anterior e que ocorre de forma assíncrona (timers, callbacks de requisições HTTP, etc.) deve utilizar a função de atualização.
