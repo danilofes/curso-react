@@ -85,6 +85,12 @@ function Tela2() {
 Além de definir as rotas, note que precisamos inserir `<RouterProvider router={router} />` no JSX da aplicação para exibir o conteúdo da rota ativa.
 Por exemplo, se executarmos essa aplicação localmente, a URL `http://localhost:3000/#/tela-1` exibirá o conteúdo de `Tela1`.
 
+### Rotas aninhadas
+
+### Rotas com segmentos dinâmicos
+
+Podemos definir rotas cujo caminho possui partes dinâmicas.
+
 ### Criando links para a rota
 
 Para gerar links para uma rota, devemos usar o componente `Link` e especificar o caminho da rota.
@@ -92,6 +98,8 @@ Para gerar links para uma rota, devemos usar o componente `Link` e especificar o
 ```tsx
 <Link to="tela-1">Texto do link</Link>
 ```
+
+Isso vai gerar um elemento `a` com o `href` correto.
 
 ```tsx
 import {
