@@ -1,5 +1,6 @@
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import { carregaCardapio } from "./backend";
+import PedidoProvider from "./PedidoProvider";
 import TelaCardapio from "./TelaCardapio";
 import TelaPedido from "./TelaPedido";
 
@@ -16,7 +17,11 @@ const router = createHashRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <PedidoProvider>
+      <RouterProvider router={router} />
+    </PedidoProvider>
+  );
 }
 
 export default App;
