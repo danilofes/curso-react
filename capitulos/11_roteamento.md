@@ -117,6 +117,7 @@ const router = createHashRouter([
 ```
 
 Note que quando especificamos o `path` iniciando com `/`, temos um caminho absoluto, caso contrário, temos um caminho relativo a rota pai.
+Vale ressaltar que não estamos restritos a um nível de aninhamento, podemos ter sub-rotas dentro de sub-rotas em quantos níveis desejarmos.
 
 ### Rotas index
 
