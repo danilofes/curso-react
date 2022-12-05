@@ -87,11 +87,91 @@ Por exemplo, se executarmos essa aplicação localmente, a URL `http://localhost
 
 ### Rotas aninhadas
 
+Podemos adicionar rotas filhas de outra rota.
+Isso é particularmente útil para montar _layouts_, pois podemos ter os elementos comuns da interface, como cabeçalho e rodapé, em uma rota principal e o conteúdo que varia como sub-rota.
+Para definir sub-rotas, basta usarmos a propriedade `children` em uma rota.
+Além disso, no conteúdo da rota principal, marcamos a posição onde as sub-rotas serão renderizadas com o componente `<Outlet />`, por exemplo:
+
+```tsx
+const router = createHashRouter([
+  {
+    path: "/",
+    element: (
+      <div>
+        <h1>Layout Principal</h1>
+        <Outlet /> {/* Aqui aparece o conteúdo da sub-rota. */}
+      </div>
+    ),
+    children: [
+      {
+        path: "tela-1",
+        element: <Tela1 />,
+      },
+      {
+        path: "tela-2",
+        element: <Tela2 />,
+      },
+    ],
+  },
+]);
+```
+
+Note que quando especificamos o `path` iniciando com `/`, temos um caminho absoluto, caso contrário, temos um caminho relativo a rota pai.
+
+### Rotas index
+
+Podemos definir uma rota sem `path`, usando a propriedade `index: true`, para marcá-la como uma rota padrão a ser ativada se nenhuma outra estiver ativa.
+
+```tsx
+const router = createHashRouter([
+  {
+    path: "/",
+    element: (
+      <div>
+        <h1>Layout Principal</h1>
+        <Outlet /> {/* TelaInicial será renderizada se nenhum outra rota estiver ativa. */}
+      </div>
+    ),
+    children: [
+      {
+        index: true,
+        element: <TelaInicial />,
+      },
+      {
+        path: "tela-1",
+        element: <Tela1 />,
+      },
+      // ... outras rotas
+    ],
+  },
+]);
+```
+
+Neste exemplo, com a URL `http://localhost:3000` o componente `<TelaInicial />` será exibido.
+Já com a URL `http://localhost:3000/#/tela-1`, o componente `<Tela1 />` será exibido.
+
 ### Rotas com segmentos dinâmicos
 
-Podemos definir rotas cujo caminho possui partes dinâmicas.
+Podemos definir rotas cujo caminho possui partes dinâmicas, especificando segmentos começando com o caractere `:`.
+Estes segmentos dinâmicos, ou seja, parâmetros da rota, podem ser acessados via _hook_ `useParams` no componente.
 
-### Criando links para a rota
+```tsx
+import { createHashRouter, useParams } from "react-router-dom";
+
+const router = createHashRouter([
+  {
+    path: "/contacts/:contactId",
+    element: <ContactDetail />,
+  },
+]);
+
+function ContactDetail() {
+  // `useParams` retorna um objeto onde cada propriedade é um segmento dinâmico da rota.
+  const { contactId } = useParams();
+}
+```
+
+### Criando links para rotas
 
 Para gerar links para uma rota, devemos usar o componente `Link` e especificar o caminho da rota.
 
@@ -100,6 +180,64 @@ Para gerar links para uma rota, devemos usar o componente `Link` e especificar o
 ```
 
 Isso vai gerar um elemento `a` com o `href` correto.
+É importante ressaltar mais uma vez que quando especificamos o caminho iniciando com `/`, temos um caminho absoluto, caso contrário, temos um caminho relativo.
+
+Além do `Link`, temos como alternativa o componente `NavLink`, que adiciona a capacidade de saber se o link está ativo ou não para estilizá-lo de forma diferente.
+Por padrão, `NavLink` adiciona a classe CSS `active` automaticamente.
+Outra opção é usar a propriedade `className`, que aceita uma função.
+
+```tsx
+<NavLink to="tasks" className={({ isActive }) => (isActive ? "x" : undefined)}>
+  Link
+</NavLink>
+```
+
+`NavLink` também aceita a propriedade booleana `end` para indicar que ela NÃO será considerada ativa se uma rota descendente estiver ativa.
+Por exemplo, para renderizar um link que só está ativo na raiz da aplicação teríamos:
+
+```tsx
+<NavLink to="/" end>
+  Home
+</NavLink>
+```
+
+### Carregando dados na rota
+
+Como é muito comum que uma tela precise buscar dados no _back end_ para renderizar seu conteúdo, o React Router oferece recursos para facilitar o carregamento de dados associados a uma rota.
+Podemos especificar em cada rota a propriedade `loader`, que é uma função responsável pelo carregamento de dados.
+Esta função recebe os parâmetros da rota e deve retornar os dados, ou uma `Promise` dos dados.
+Se o valor retornado for `Promise<Response>`, ou seja, resultado de uma chamada HTTP via `fetch`, o dados JSON resultantes são automaticamente convertidos para objetos.
+No componente, acessamos os dados carregados via _hook_ `useLoaderData`.
+
+```tsx
+import { createHashRouter, useLoaderData } from "react-router-dom";
+
+const router = createHashRouter([
+  {
+    path: "/rota-com-dados/:id",
+    element: <RotaComDados />,
+    loader: ({ params }) => fetch(`http://meu-backend/api/dados/${params.id}`),
+  },
+]);
+
+function RotaComDados() {
+  const dados = useLoaderData();
+  // Resto do componente.
+}
+```
+
+Poderíamos fazer o carregamento de dados com `useEffect`, como vimos na seção Efeitos Colaterais.
+No entanto, como o carregamento de dados ocorre de maneira assíncrona, a primeira renderização do componente ocorre sem que os dados estejam disponíveis.
+Isso muitas vezes é inconveniente e torna o código mais complicado, pois temos que tratar este caso excepcional.
+Ao usar o `loader`, o React Router aguarda o carregamento dos dados antes de renderizar o conteúdo da rota, evitando que nos preocupemos com este problema.
+
+:::info
+**Nota:**
+Além de carregar dados, o React Router oferece recursos para alteração de dados.
+Este conteúdo não será coberto neste curso, mas sugerimos ler o [Tutorial do React Router](https://reactrouter.com/en/main/start/tutorial) para conhecer todos os recursos disponíveis.
+:::
+
+### Usando todos os recursos em conjunto
 
 ```tsx
 import {
