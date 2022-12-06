@@ -9,7 +9,7 @@ Abaixo temos uma demonstração da aplicação em funcionamento.
 
 É importante implementar os seguintes comportamentos:
 
-- O campo Estado fica desabilitado enquanto o campo Região está vazio.
+- O campo Estado fica desabilitado enquanto o campo Região está vazia.
 - Ao trocar a região, devemos limpar o campo Estado e carregar a lista de estados daquela região.
 
 As listas de regiões deve ser obtida pela API do IBGE:
