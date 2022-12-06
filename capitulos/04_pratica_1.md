@@ -42,4 +42,7 @@ Abaixo temos uma demonstração da aplicação em funcionamento, supondo que usa
 
 ### Solução
 
+Sugerimos que você tente resolver o exercício e depois veja a solução.
+Utilize o projeto base fornecido nas informações gerais do curso.
+
 O código fonte da solução está disponível no repositório do curso, em [exercicios/galeria-fotos](https://github.com/danilofes/curso-react/tree/main/exercicios/galeria-fotos).
