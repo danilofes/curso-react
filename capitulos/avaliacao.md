@@ -1,0 +1,3 @@
+- A avaliação final é baseada em todo o conteúdo teórico deste curso.
+- Para que o aluno tenha uma melhor pontuação, é recomendado que ele tenha também realizado as práticas.
+- Preste atenção ao responder as perguntas, pois haverá somente duas tentativas e as respostas corretas não serão exibidas.
