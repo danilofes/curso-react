@@ -41,18 +41,18 @@ Para usar o React Router, primeiro devemos escolher uma dentre duas opções de 
   Este método não precisa usar a API History pois alterar `location.hash` NÃO faz com que o documento seja recarregado.
 
 A estratégia de roteamento escolhida tem mais impacto no _back end_ da aplicação do que no _front end_.
-Usando o **Browser Router**, o _back end_ receberá requisições HTTP com URLs diferentes para cada tela, mas deve tomar o cuidado de servir o mesmo documento principal, contendo a aplicação React.
-Usando o **Hash Router**, o _back end_ receberá requisições HTTP apenas na URL raiz, pois a _URI Fragment_ não é enviada pelo navegador.
-Resumindo, com **Hash Router** não precisamos de configuração alguma no _back end_, portanto costuma ser a solução mais simples.
-No entanto, **Browser Router** é uma solução mais elegante e que dá maior flexibilidade, por exemplo, para usar recursos mais avançados do React como a renderização do lado do servidor.
-Dito isso, no restante da seção usaremos **Hash Router**, por sua simplicidade, visto que a maneira de usar React Router não se altera.
+Usando o Browser Router, o _back end_ receberá requisições HTTP com URLs diferentes para cada tela, mas deve tomar o cuidado de servir o mesmo documento principal, contendo a aplicação React.
+Usando o Hash Router, o _back end_ receberá requisições HTTP apenas na URL raiz, pois a _URI Fragment_ não é enviada pelo navegador.
+Resumindo, com Hash Router não precisamos de configuração alguma no _back end_, portanto esta costuma ser a solução mais simples.
+No entanto, Browser Router é uma solução mais elegante e que dá maior flexibilidade, por exemplo, para usar recursos mais avançados do React como a renderização do lado do servidor.
+Dito isto, no restante da seção usaremos Hash Router, por sua simplicidade, visto que a maneira de usar React Router não se altera.
 
 ### Criando o router
 
 O primeiro passo para configurar o roteamento na aplicação é criar o objeto router usando a função `createHashRouter` (ou `createBrowserRouter`).
 Esta função recebe como parâmetro um _array_ de objetos que descrevem cada rota da aplicação.
 Cada rota descreve o padrão de URL que a ativa e qual elemento deve ser exibido.
-Digamos que nossa aplicação possua duas telas, com as URLs `/tela-1` e `/tela-2`.
+Digamos que nossa aplicação possua duas telas, com as rotas `/tela-1` e `/tela-2`.
 O código ficaria assim:
 
 ```tsx
@@ -177,23 +177,23 @@ function ContactDetail() {
 Para gerar links para uma rota, devemos usar o componente `Link` e especificar o caminho da rota.
 
 ```tsx
-<Link to="tela-1">Texto do link</Link>
+<Link to="/tela-1">Texto do link</Link>
 ```
 
 Isso vai gerar um elemento `a` com o `href` correto.
-É importante ressaltar mais uma vez que quando especificamos o caminho iniciando com `/`, temos um caminho absoluto, caso contrário, temos um caminho relativo.
+É importante ressaltar que quando especificamos o caminho iniciando com `/`, temos um caminho absoluto, caso contrário, temos um caminho relativo.
 
-Além do `Link`, temos como alternativa o componente `NavLink`, que adiciona a capacidade de saber se o link está ativo ou não para estilizá-lo de forma diferente.
-Por padrão, `NavLink` adiciona a classe CSS `active` automaticamente.
+Além do `Link`, temos como alternativa o componente `NavLink`, que oferece a capacidade de estilização diferente quando o link está ativo.
+Por padrão, `NavLink` adiciona a classe CSS `active` quando a rota atual corresponde ao link.
 Outra opção é usar a propriedade `className`, que aceita uma função.
 
 ```tsx
-<NavLink to="tasks" className={({ isActive }) => (isActive ? "x" : undefined)}>
+<NavLink to="tasks" className={({ isActive }) => (isActive ? "classeQuandoAtivo" : undefined)}>
   Link
 </NavLink>
 ```
 
-`NavLink` também aceita a propriedade booleana `end` para indicar que ela NÃO será considerada ativa se uma rota descendente estiver ativa.
+`NavLink` também aceita a propriedade booleana `end` para indicar que o link NÃO será considerado ativo se uma rota descendente estiver ativa.
 Por exemplo, para renderizar um link que só está ativo na raiz da aplicação teríamos:
 
 ```tsx
@@ -237,6 +237,29 @@ Ao usar o `loader`, o React Router aguarda o carregamento dos dados antes de ren
 Além de carregar dados, o React Router oferece recursos para alteração de dados.
 Este conteúdo não será coberto neste curso, mas sugerimos ler o [Tutorial do React Router](https://reactrouter.com/en/main/start/tutorial) para conhecer todos os recursos disponíveis.
 :::
+
+### Acessando a situação do carregamento
+
+Enquanto carregamos dados é desejável exibir um indicador de carregamento na interface, caso contrário o usuário pode imaginar que aplicação está travada.
+Quando o carregamento é feito via `loader`, podemos fazer isso via _hook_ `useNavigation`.
+Esta função nos dá um objeto contendo, entre outras informações, a propriedade `status`, que pode ter os valores `"idle" | "loading" | "submitting"`.
+Podemos utilizar este valor para exibir condicionalmente um indicador de carregamento.
+No entanto, é importante ter em mente que a rota só renderiza após o carregamento e portanto faz mais sentido exibir o indicador na rota raiz, que contém o layout principal.
+
+```tsx
+import { Outlet, useNavigation } from "react-router-dom";
+
+function RootRoute() {
+  const navigation = useNavigation();
+
+  return (
+    <div>
+      {navigation.state === "loading" && <span className="loading" />}
+      <Outlet />
+    </div>
+  );
+}
+```
 
 ### Usando todos os recursos em conjunto
 

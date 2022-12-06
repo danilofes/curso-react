@@ -25,7 +25,7 @@ function ComponenteFicticio(props: any) {
   return <div>Este é um componente React</div>;
 }
 
-function funcaoComum(props): string {
+function funcaoComum(): string {
   const [estado1, setEstado1] = useState(0); // ERRADO: só pode chamar hook dentro de componente.
 
   return "Esta é uma função comum, não um componente";
@@ -137,7 +137,7 @@ function useInterval(time: number, fn: () => void) {
 Note que o _hook_ `useInterval` é usado dentro do hook `useCurrentTime`, que por sua vez é usado no componente `DigitalClock`.
 Isto é permitido.
 Na prática, as chamadas a `useState` e `useEffect`, ainda que sejam feitas indiretamente, estarão associadas à instância do componente `DigitalClock`.
-As regras dos _hooks_ garantem que elas sejam chamadas sempre na mesma ordem.
+As regras dos _hooks_ garantem que as chamadas sejam feitas sempre na mesma ordem.
 
 ### Componentes baseados em classes
 

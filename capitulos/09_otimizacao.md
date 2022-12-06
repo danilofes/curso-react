@@ -1,5 +1,5 @@
-Vimos que o uma das principais vantagens de utilizar React é que ele cuida da atualização dos elementos do DOM, enquanto nós precisamos apenas descrever como a interface deve ser.
-De fato, o React renderiza os componentes sempre que houver mudanças de estado e, por padrão, todos os componentes descendentes são renderizados novamente.
+Vimos que uma das principais vantagens de utilizar React é que ele cuida da atualização dos elementos do DOM, enquanto nós precisamos apenas descrever como a interface deve ser.
+O React renderiza os componentes sempre que houver mudanças de estado e, por padrão, todos os componentes descendentes são renderizados novamente.
 Normalmente, isso não é um problema, pois o algoritmo de comparação do virtual DOM é bastante rápido.
 No entanto, em determinadas situações, pode ser necessário evitar renderizações desnecessárias ou a execução de cálculos pesados em cada renderização para melhorar a performance da aplicação.
 Nesta seção veremos algumas formar de fazer isso.
@@ -102,6 +102,8 @@ No entanto, se `x` mudar, `C_1` e seus descendentes serão renderizados, visto q
 **Nota:**
 A comparação de mudanças nos `props` é feita de maneira rasa, ou seja, cada propriedade do objeto `props` é comparado com o valor anterior usando o operador `===`.
 Isto significa que valores que são objetos ou _arrays_ serão comparados por referência.
+Se o objeto mudar, ainda que seu conteúdo não mude, o React considerará que o `props` mudou.
+É possível mudar esse comportamento e especificar sua própria lógica de comparação de `props` passando uma função de comparação como segundo parâmetro de `memo`.
 :::
 
 ### O hook `useMemo`
@@ -156,14 +158,16 @@ const [y, setY] = useState(0);
 const coords = [x, y];
 ```
 
-Se `coords` é computada em toda renderização, ela sempre será um _array_ diferente, mesmo que `x` e `y` não tenha mudado.
-Isso pode ser um problema se `coords` for passado via `props` para um componente otimizado com `memo`, pois o componente sempre será renderizado.
+Se `coords` é computada em toda renderização, ela sempre será um _array_ diferente, mesmo que `x` e `y` não tenham mudado.
+Isso pode ser um problema se `coords` for passado via `props` para um componente otimizado com `memo`, pois o componente sempre será renderizado novamente.
 De forma semelhante, teremos problemas se `coords` for usado como dependência de um efeito.
 Para evitar estes problemas, poderíamos computar `coords` como:
 
 ```tsx
 const coords = useMemo(() => [x, y], [x, y]);
 ```
+
+Dessa forma, coords será um novo array apenas quando `x` ou `y` mudar.
 
 #### Funções estáveis com `useCallback`
 

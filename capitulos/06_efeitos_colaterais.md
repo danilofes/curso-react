@@ -201,6 +201,9 @@ Esta função é executada em duas situações:
 Tal função é muito útil quando fazemos algo no efeito que precisa ser desfeito, por exemplo, registrar um tratador de eventos ou temporizador.
 
 No componente `DigitalClock` a seguir exibimos um relógio que é atualizado a cada segundo.
+
+<iframe src="https://cralmg-digital-clock.stackblitz.io" style="border:4px solid #ddd; width:200px; height:60px"></iframe>
+
 Para isso usamos um efeito que chama `setInterval` para criar um temporizador e chamamos `clearInterval` na função de limpeza retornada pelo efeito.
 
 ```tsx
