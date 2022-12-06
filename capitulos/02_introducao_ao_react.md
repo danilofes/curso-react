@@ -1,6 +1,6 @@
-React é uma biblioteca JavaScript que nos ajuda a construir a interfaces gráficas de aplicações web.
+React é uma biblioteca JavaScript que nos ajuda a construir interfaces gráficas de aplicações web.
 
-Existem basicamente duas maneiras de utilizar React: utilizá-lo diretamente em um script no navegador ou criar um projeto React, utilizando um conjunto de ferramentas de desenvolvimento.
+Existem basicamente duas maneiras de utilizar React: (i) diretamente no navegador ou (ii) por meio de um projeto React, que utiliza um conjunto de ferramentas de desenvolvimento.
 Nas seções seguintes vamos descrever estas duas formas.
 
 ### Usando React diretamente no navegador
@@ -31,12 +31,12 @@ Feito isso, podemos definir nosso primeiro componente React.
 ```
 
 Um componente React é definido por meio de uma função JavaScript.
-Tal função deve retornar um _React Element_, uma estrutura de dados que representa uma subárvore de elementos HTML que serão exibidos na interface, ou seja, inseridos no DOM (Document Object Model).
+Tal função deve retornar um elemento React, uma estrutura de dados que representa uma subárvore de elementos HTML que serão exibidos na interface, ou seja, inseridos no DOM (Document Object Model).
 Neste caso, estamos retornando um elemento `div`, cujo conteúdo é "Hello world!".
-Ou seja, quando tal componente for exibido na interface, espera-se que ele corresponda ao HTML `<div>Hello world!</div>`.
+Ou seja, quando tal componente for exibido na interface, espera-se que ele corresponda ao HTML: `<div>Hello world!</div>`.
 De forma geral, podemos dizer objetivo do React é nos ajudar a criar (ou atualizar) elementos na página dinamicamente, via JavaScript.
 
-No entanto, o código acima não exibe conteúdo algum na página, pois não renderizamos o componente.
+No entanto, o código acima não exibe conteúdo algum na página, pois ainda não renderizamos o componente.
 Para isso, devemos criar um nó raiz usando a função `ReactDOM.createRoot` e chamar sua função `render`.
 O exemplo completo ficaria assim.
 
@@ -129,7 +129,28 @@ src/
 package.json
 ```
 
-Em `src/App.js` encontramos o componente principal da nossa aplicação e em `src/index.js` , tal componente é renderizado no elemento com id `root` que é definido em `public/index.html`.
+Tal diretório segue a estrutura de um projeto [Node.js](https://nodejs.org/): o arquivo `package.json` contém metadados do projeto e o diretório `node_module/` contém as dependências do projeto.
+Em `src/App.js` encontramos o componente principal da nossa aplicação.
+Já em `src/index.js`, tal componente é renderizado no documento `public/index.html`, usando um código semelhante ao abaixo:
+
+```jsx
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+```
+
+É interessante notar dois pontos:
+
+1. Podemos usar a sintaxe de `import` de ES6 para importar componentes ou definições de outros arquivos. Sendo assim, podemos organizar nosso código-fonte em vários arquivos e pastas, conforme desejarmos.
+2. Podemos usar a sintaxe JSX para definir os componentes.
+
+:::info
+**Alerta:**
+O diretório `node_modules` nunca deve ser gravado no controle de versão (git) ou copiado, pois seu conteúdo normalmente é muito grande e ele pode ser recriado a partir dos metadados do projeto (`package.json`) com o comando `npm install`.
+Portanto, sempre que baixar um projeto Node.js de um repositório ou usar um template de projeto vazio, antes de começar a desenvolver execute `npm install` no diretório para recriar `node_modules`.
+:::
 
 ### Construindo o projeto React
 
@@ -157,12 +178,12 @@ A construção do projeto realiza uma série tarefas, entre elas:
 - Realiza verificações de erros ou _warnings_ no projeto;
 - Transforma a sintaxe JSX em JavaScript puro;
 - Transforma alguns recursos de JavaScript em código JavaScript tradicional (ES5) para obter maior compatibilidade com navegadores antigos;
-- Concatena todo o código JavaScript em um arquivo único (este processo é conhecido como _bundling_);
+- Resolve _imports_ e concatena todo o código JavaScript em um arquivo único (este processo é conhecido como _bundling_);
 - Também concatena todo o código CSS em um arquivo único (é possível importar arquivos CSS no código fonte);
 - Monta o `index.html` final, referenciando os arquivos JavaScript e CSS construídos.
 
 ::: info
-**Nota:** Todo o ferramental de criação e construção do projeto executa no Node.js, daí a necessidade de instalá-lo.
+**Nota:**
 O `create-react-app` internamente utiliza ferramentas como [ESLint](https://eslint.org/), [Babel](https://babeljs.io/) e [Webpack](https://webpack.js.org/) para realizar estas tarefas.
 É possível configurar estas e outras ferramentas manualmente para trabalhar com React de forma mais livre, usando a estrutura de projeto e etapas de construção desejadas, sem depender do `create-react-app`.
 No entanto, isto está fora do escopo deste curso.
@@ -173,7 +194,7 @@ No entanto, isto está fora do escopo deste curso.
 Você deve ter notado que a construção do projeto leva um tempo que não pode ser desprezado.
 Portanto, teríamos um grande inconveniente se precisássemos construir o projeto a cada alteração no código para ver o resultado no navegador.
 Felizmente isso não é necessário.
-Ao executar o comando
+Ao executar o comando:
 
 ```
 npm start
@@ -186,7 +207,7 @@ Além disso, qualquer alteração no código fonte dispara um processo de recons
 
 TypeScript é uma extensão da linguagem JavaScript que adiciona um sistema de verificação de tipos em tempo de compilação.
 Ou seja, em JavaScript, erros de tipo ocorrem durante a execução caso não sejam devidamente tratados, em TypeScript, erros de tipos já são encontrados no momento da compilação.
-Com isso, o desenvolvimento se torna menos propenso a erros, trazendo maior facilidade de manutenção, especialmente porque a IDE Visual Studio Code fornece suporte excelente à linguagem.
+Com isso, o desenvolvimento se torna menos propenso a erros, trazendo maior facilidade de manutenção, especialmente porque a IDE Visual Studio Code fornece excelente suporte à linguagem.
 
 O `create-react-app` possui suporte oficial ao uso de TypeScript para a codificação da aplicação, basta criarmos o projeto com o comando:
 

@@ -1,6 +1,6 @@
 Componentes são a mais importante abstração fornecida pelo React.
 Nós construímos interfaces em React por meio de componentes, que podem utilizar outros componentes, e assim sucessivamente, formando uma árvore.
-Vimos anteriormente que componentes são simplesmente funções que retornam _React Elements_, mas eles não seriam de grande utilidade se não pudessem receber parâmetros.
+Vimos anteriormente que componentes são simplesmente funções que retornam elementos React, mas eles não seriam de grande utilidade se não pudessem receber parâmetros.
 
 ### Props
 
@@ -20,13 +20,14 @@ Esta sintaxe é um recurso do JSX conhecido como interpolação.
 Sempre que abrimos chaves dentro do JSX, podemos avaliar uma expressão TypeScript convencional.
 Veremos esse recurso frequentemente nos próximos exemplos.
 
-Usamos o componente `Hello` em JSX com sintaxe abaixo. Note que elementos React (tags JSX) podem representar elementos HTML nativos ou componentes React.
+Elementos React (ou seja, tags JSX) podem representar elementos HTML nativos ou componentes React.
+Usamos o componente `Hello` em JSX com sintaxe abaixo.
 
 ```tsx
 <Hello name="Danilo" />
 ```
 
-Como resultado, teremos no DOM:
+Como resultado, teremos os seguintes elementos no DOM:
 
 ```html
 <div>Hello Danilo</div>
@@ -109,12 +110,12 @@ O React usa eventos sintéticos que encapsulam os eventos do DOM para normalizar
 #### Recebendo elementos React via props
 
 Um componente pode receber elementos React via _props_.
-Isso pode é muito útil quando nosso componente funciona como um container para conteúdo arbitrário, como no exemplo abaixo:
+Isso pode é muito útil quando nosso componente funciona como um contêiner para conteúdo arbitrário, como no exemplo abaixo:
 
 ```tsx
-import React from "react";
+import { ReactNode } from "react";
 
-function Panel(props: { title: string; content: React.ReactNode }) {
+function Panel(props: { title: string; content: ReactNode }) {
   return (
     <div>
       <h3>{props.title}</h3>
@@ -137,12 +138,14 @@ Podemos utilizar o componente `Panel` da seguinte forma:
 />
 ```
 
-Como vimos acima, o componente `Panel` recebe elementos React via propriedade `content`.
-No entanto, se renomearmos a propriedade para `children` podemos nos beneficiar de uma convenção do React para tornar o código JSX mais simples: o conteúdo passado dentro das _tags_ de abertura e fechamento do componente se tornam o valor da propriedade `children`.
+Como vimos acima, o componente `Panel` recebe elementos React via propriedade `content`, cujo tipo é `ReactNode`.
+
+No entanto, é possível tornar o código mais idiomático.
+Se renomearmos a propriedade `content` para `children` podemos nos beneficiar de uma convenção do React para tornar o código JSX mais simples: o conteúdo passado dentro das _tags_ de abertura e fechamento do componente se tornam o valor da propriedade `children`.
 Ou seja, o novo código ficaria da seguinte forma.
 
 ```tsx
-function Panel(props: { title: string; children: React.ReactNode }) {
+function Panel(props: { title: string; children: ReactNode }) {
   return (
     <div>
       <h3>{props.title}</h3>
@@ -215,7 +218,7 @@ Este código funciona pois o operador `&&` retorna o primeiro operando caso ele 
 
 ### Repetição de elementos
 
-Podemos inserir um _array_ de _React Elements_ no JSX por meio da sintaxe de chaves.
+Podemos inserir um _array_ de elementos React no JSX por meio da sintaxe de chaves.
 Com isso é possível, por exemplo, usar `for` para gerar elementos dinamicamente.
 O componente abaixo exibe uma lista com 10 itens.
 
