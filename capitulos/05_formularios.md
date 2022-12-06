@@ -9,7 +9,7 @@ Ou seja, se temos um elemento `input` na interface, o valor digitado nele estar�
 Isto significa que para ler o valor precisamos acessar o DOM diretamente (normalmente em um tratador de eventos).
 Como consequência, o valor do `input` não estará disponível durante a renderização do componente.
 
-Para entender melhor melhor, vamos considerar o componente `Adder` a seguir.
+Para entender melhor, vamos considerar o componente `Adder` a seguir.
 Ele possui dois campos numéricos como entrada e o botão Somar.
 Ao apertar o botão, a soma dos número é exibida como resultado.
 
@@ -150,6 +150,10 @@ Podemos descartar o estado usado para armazenar a soma e computar `sum` durante 
 Inclusive podemos usar `n1` e `n2` para exibir o resultado como `{n1} + {n2} = {sum}` (imagine como seria complicado fazer isso na abordagem não controlada).
 Além disso, podemos remover o `form`, o botão e o tratador de evento _submit_.
 
+### Especificidades de formulários controlados
+
+Devemos conhecer algumas especificidades do tratamento de formulários controlados para os diferentes elementos de entrada de dados.
+
 #### Elemento `select`
 
 O elemento `select` em HTML nativo é definido da seguinte forma:
@@ -250,7 +254,7 @@ export default function CheckboxExample() {
 Como o valor de elementos `<input type="file">` não podem ser definidos via JavaScript, apenas pelo própria ação do usuário, não podemos utilizá-los no modo controlado.
 Utilize-o com a abordagem não controlada e APIs nativas.
 
-#### Formulários com múltiplos campos
+### Formulários com múltiplos campos
 
 Muitas vezes um formulário é utilizado para editar vários campos de um mesmo objeto de negócio.
 Nada nos impede de salvar as informações no estado como um único objeto, como no exemplo abaixo, onde temos um objeto `user` cujos campos `name`, `email` e `phone` são editados no formulário:
@@ -306,7 +310,7 @@ A abordagem de formulários controlados é a recomendada pelo time do React para
 Ela nos oferece a possibilidade de:
 
 - acessar o valor dos campos durante a renderização;
-- alterar o valor dos campos alterando o estado, isto é particularmente útil para implementar tarefas como limpar o restaurar os campos de um formulário.
+- alterar o valor dos campos alterando o estado, isto é particularmente útil para implementar tarefas como limpar ou restaurar os campos de um formulário.
 
 No entanto, devemos considerar também suas desvantagens:
 

@@ -39,3 +39,7 @@ Abaixo temos uma demonstração da aplicação em funcionamento, supondo que usa
   Da mesma forma, os botões de mostrar a próxima foto e mostrar a última foto devem ficar desabilitados quando estiver na última foto.
 
 - Se a propriedade `fotos` for um _array_ vazio, é exibida a mensagem “Nenhuma foto”.
+
+### Solução
+
+O código fonte da solução está disponível no repositório do curso, em [exercicios/galeria-fotos](https://github.com/danilofes/curso-react/tree/main/exercicios/galeria-fotos).
