@@ -9,3 +9,41 @@ select {
   font-family: inherit;
   font-size: inherit;
 }
+
+.worldCup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+header {
+  text-align: center;
+  flex: 1 0 100%;
+}
+
+nav {
+  flex: 0 1 auto;
+}
+
+main {
+  flex: 0 1 auto;
+}
+
+.loading {
+  display: inline-block;
+  height: 0.8rem;
+  width: 0.8rem;
+  border: 3px solid grey;
+  animation: spin 1s linear infinite;
+  border-radius: 50%;
+  border-right-color: transparent;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -4,20 +4,22 @@ export default function Galeria(props: { titulo: string; fotos: string[] }) {
   const { titulo, fotos } = props;
   const [fotoAtual, setFotoAtual] = useState(0);
   const ultima = fotos.length - 1;
+  const estaNaPrimeira = fotoAtual === 0;
+  const estaNaUltima = fotoAtual === ultima;
 
-  function voltaParaPrimeira() {
-    setFotoAtual(0);
-  }
-
-  function voltaParaAnterior() {
-    setFotoAtual(fotoAtual - 1);
-  }
-
-  function vaiParaProxima() {
+  function vaiParaProximaFoto() {
     setFotoAtual(fotoAtual + 1);
   }
 
-  function vaiParaUltima() {
+  function vaiParaFotoAnterior() {
+    setFotoAtual(fotoAtual - 1);
+  }
+
+  function vaiParaPrimeiraFoto() {
+    setFotoAtual(0);
+  }
+
+  function vaiParaUltimaFoto() {
     setFotoAtual(ultima);
   }
 
@@ -29,20 +31,20 @@ export default function Galeria(props: { titulo: string; fotos: string[] }) {
         <div>
           <div>
             Foto {fotoAtual + 1} de {fotos.length}
-            <button onClick={voltaParaPrimeira} disabled={fotoAtual === 0}>
+            <br />
+            <button disabled={estaNaPrimeira} onClick={vaiParaPrimeiraFoto}>
               Primeira
             </button>
-            <button onClick={voltaParaAnterior} disabled={fotoAtual === 0}>
+            <button disabled={estaNaPrimeira} onClick={vaiParaFotoAnterior}>
               Anterior
             </button>
-            <button onClick={vaiParaProxima} disabled={fotoAtual === ultima}>
+            <button disabled={estaNaUltima} onClick={vaiParaProximaFoto}>
               Próxima
             </button>
-            <button onClick={vaiParaUltima} disabled={fotoAtual === ultima}>
+            <button disabled={estaNaUltima} onClick={vaiParaUltimaFoto}>
               Última
             </button>
           </div>
-
           <img src={fotos[fotoAtual]} alt={`Foto ${fotoAtual + 1}`} />
         </div>
       )}

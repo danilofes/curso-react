@@ -1,6 +1,6 @@
 import Galeria from "./Galeria";
 
-function App() {
+export default function App() {
   return (
     <div>
       <Galeria
@@ -17,5 +17,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

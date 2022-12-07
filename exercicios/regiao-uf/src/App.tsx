@@ -1,53 +1,36 @@
 import { useEffect, useState } from "react";
+import { buscaEstados, buscaRegioes, Estado, Regiao } from "./api";
 
-interface Regiao {
-  id: number;
-  sigla: string;
-  nome: string;
-}
-
-interface Estado {
-  id: number;
-  sigla: string;
-  nome: string;
-  regiao: Regiao;
-}
-
-const urlBase = "https://servicodados.ibge.gov.br/api/v1/localidades";
-
-function App() {
+export default function App() {
   const [regioes, setRegioes] = useState<Regiao[]>([]);
-  const [idRegiao, setIdRegiao] = useState("");
-  const [estados, setEstados] = useState<Estado[]>([]);
-  const [idEstado, setIdEstado] = useState("");
-
-  // Busca as regiões ao montar
   useEffect(() => {
-    fetchJson<Regiao[]>(`${urlBase}/regioes`).then(setRegioes);
+    buscaRegioes().then(setRegioes);
   }, []);
 
-  // Busca os estados quando idRegiao muda e valor não vazio
+  const [idRegiao, setIdRegiao] = useState<string>("");
+
+  const [estados, setEstados] = useState<Estado[]>([]);
   useEffect(() => {
     if (idRegiao) {
-      fetchJson<Estado[]>(`${urlBase}/regioes/${idRegiao}/estados`).then(
-        setEstados
-      );
+      buscaEstados(idRegiao).then(setEstados);
     }
   }, [idRegiao]);
 
+  const [idUf, setIdUf] = useState<string>("");
+
   return (
     <form>
-      <div className="campo">
-        <label htmlFor="reg">Região:</label>
+      <div>
+        <label htmlFor="reg">Região: </label>
         <select
           id="reg"
           value={idRegiao}
           onChange={(e) => {
             setIdRegiao(e.target.value);
-            setIdEstado("");
+            setIdUf("");
           }}
         >
-          <option value="">Escolha a região</option>
+          <option value="">Escolha uma região</option>
           {regioes.map((regiao) => (
             <option key={regiao.id} value={regiao.id}>
               {regiao.nome}
@@ -55,15 +38,10 @@ function App() {
           ))}
         </select>
       </div>
-      <div className="campo">
-        <label htmlFor="uf">Estado:</label>
-        <select
-          id="uf"
-          value={idEstado}
-          onChange={(e) => setIdEstado(e.target.value)}
-          disabled={!idRegiao}
-        >
-          <option value="">Escolha o estado</option>
+      <div>
+        <label htmlFor="uf">Estado: </label>
+        <select id="uf" value={idUf} onChange={(e) => setIdUf(e.target.value)} disabled={!idRegiao}>
+          <option value="">Escolha uma estado</option>
           {estados.map((estado) => (
             <option key={estado.id} value={estado.id}>
               {estado.nome}
@@ -71,13 +49,7 @@ function App() {
           ))}
         </select>
       </div>
-      <div>ID do estado escolhido: {idEstado}</div>
+      <div>ID do estado selecionado: {idUf}</div>
     </form>
   );
 }
-
-function fetchJson<T>(url: string): Promise<T> {
-  return fetch(url).then((r) => r.json());
-}
-
-export default App;
