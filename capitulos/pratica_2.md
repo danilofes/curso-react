@@ -45,6 +45,9 @@ interface Estado {
 ### Solução
 
 Sugerimos que você tente resolver o exercício e depois veja a solução.
-Utilize o projeto base fornecido nas informações gerais do curso.
+Utilize o projeto base fornecido nas informações gerais do curso como ponto de partida.
 
 O código fonte da solução está disponível no repositório do curso, em [exercicios/regiao-uf](https://github.com/danilofes/curso-react/tree/main/exercicios/regiao-uf).
+Abaixo temos um vídeo da resolução.
+
+<iframe width="720" height="480" src="https://www.youtube.com/embed/9HQUvNo_5Vk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
