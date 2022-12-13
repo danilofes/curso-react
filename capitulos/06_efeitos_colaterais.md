@@ -79,7 +79,7 @@ A interface da aplicação deve possuir um `select` para escolher o ano da copa 
 As partidas da copa devem ser carregadas e exibidas no componente, e sempre que mudar o ano no `select`, devemos recarregá-las.
 A aplicação final ficaria da seguinte assim:
 
-<iframe src="https://cralmg-world-cup-matches.stackblitz.io" style="border:4px solid #ddd; width:600px; height:600px; margin: 1rem 0"></iframe>
+<iframe src="https://cralmg-world-cup-matches.stackblitz.io" style="border:4px solid #ddd; width:100%; height:600px; margin: 1rem 0"></iframe>
 
 Abaixo temos o código-fonte da implementação.
 
@@ -202,7 +202,7 @@ Tal função é muito útil quando fazemos algo no efeito que precisa ser desfei
 
 No componente `DigitalClock` a seguir exibimos um relógio que é atualizado a cada segundo.
 
-<iframe src="https://cralmg-digital-clock.stackblitz.io" style="border:4px solid #ddd; width:200px; height:60px"></iframe>
+<iframe src="https://cralmg-digital-clock.stackblitz.io" style="border:4px solid #ddd; width:100%; height:300px"></iframe>
 
 Para isso usamos um efeito que chama `setInterval` para criar um temporizador e chamamos `clearInterval` na função de limpeza retornada pelo efeito.
 

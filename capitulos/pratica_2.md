@@ -5,7 +5,7 @@ Crie uma aplicação React contendo um formulário com dois campos para selecion
 
 Abaixo temos uma demonstração da aplicação em funcionamento.
 
-<iframe src="https://cralmg-regiao-estado.stackblitz.io" style="border:4px solid #ddd; width:100%; height:120px"></iframe>
+<iframe src="https://cralmg-regiao-estado.stackblitz.io" style="border:4px solid #ddd; width:100%; height:300px"></iframe>
 
 É importante implementar os seguintes comportamentos:
 

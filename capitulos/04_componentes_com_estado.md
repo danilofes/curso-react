@@ -7,9 +7,9 @@ Este componente exibe o valor de um contador e provê dois botões:
 - _Incrementar_: acrescenta 1 no contador.
 - _Reiniciar_: volta o contador para zero.
 
-Abaixo temos uma demonstração de seu funcionamento.
+Abaixo temos uma demonstração de seu funcionamento (talvez você precise clicar em **Run this project** para visualizar).
 
-<iframe src="https://cralmg-react-counter.stackblitz.io/" style="border:4px solid #ddd; width:300px; height:100px"></iframe>
+<iframe src="https://cralmg-react-counter.stackblitz.io/" style="border:4px solid #ddd; width:100%; height:300px"></iframe>
 
 ### Como adicionar estado a um componente
 

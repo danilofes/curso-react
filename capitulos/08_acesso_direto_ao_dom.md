@@ -32,7 +32,7 @@ No componente `RefExample`, usamos `useRef` para criar o objeto `inputRef`.
 Este objeto é então usado para referenciar o elemento `input` e chamar a função `focus` do mesmo quando pressionamos o botão.
 Este é o comportamento resultante:
 
-<iframe src="https://cralmg-react-useref.stackblitz.io" style="border:4px solid #ddd; width:400px; height:100px; margin: 1rem 0"></iframe>
+<iframe src="https://cralmg-react-useref.stackblitz.io" style="border:4px solid #ddd; width:100%; height:300px; margin: 1rem 0"></iframe>
 
 É importante ressaltar os seguintes pontos com relação ao código-fonte:
 

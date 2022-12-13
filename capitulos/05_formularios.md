@@ -13,7 +13,7 @@ Para entender melhor, vamos considerar o componente `Adder` a seguir.
 Ele possui dois campos numéricos como entrada e o botão Somar.
 Ao apertar o botão, a soma dos número é exibida como resultado.
 
-<iframe src="https://cralmg-react-counter-s9hfmb.stackblitz.io/" style="border:4px solid #ddd; width:600px; height:120px; margin: 1rem 0"></iframe>
+<iframe src="https://cralmg-react-counter-s9hfmb.stackblitz.io/" style="border:4px solid #ddd; width:100%; height:300px; margin: 1rem 0"></iframe>
 
 Abaixo temos uma possível implementação do componente usando um formulário não controlado.
 
@@ -122,7 +122,7 @@ Podemos nos beneficiar da abordagem controlada para tornar nosso componente aind
 Suponha que desejamos eliminar o botão Somar, ou seja, o resultado da soma aparecerá imediatamente conforme digitarmos.
 O resultado final ficaria assim:
 
-<iframe src="https://cralmg-react-counter-vhyb2n.stackblitz.io" style="border:4px solid #ddd; width:600px; height:120px; margin: 1rem 0"></iframe>
+<iframe src="https://cralmg-react-counter-vhyb2n.stackblitz.io" style="border:4px solid #ddd; width:100%; height:300px; margin: 1rem 0"></iframe>
 
 Este é o novo código-fonte:
 
