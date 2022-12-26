@@ -52,7 +52,7 @@ Esta função recebe como parâmetro um valor inicial a ser armazenado (neste ca
 - o valor atual armazenado no estado;
 - a função para atualizar o estado.
 
-No linha de código acima, usamos desestruturação para atribuir estes valores às variáveis `counter` e `setConter`, respectivamente.
+Na linha de código acima, usamos desestruturação para atribuir estes valores às variáveis `counter` e `setConter`, respectivamente.
 Podemos armazenar tanto tipos primitivos quanto objetos no estado.
 
 :::info
@@ -72,6 +72,7 @@ function increment() {
 Tal função altera o estado por meio da chamada à `setCounter`, passando como parâmetro o novo valor (`counter + 1`).
 De forma semelhante, a função `reset` também atualiza o estado por meio da chamada à `setCounter`, voltando o contador para zero.
 A única maneira válida de atualizar o estado é chamando a função de atualização associada a ele.
+
 Por fim, o componente retorna o JSX:
 
 ```tsx
@@ -171,8 +172,9 @@ function increment() {
 ```
 
 Agora sim nosso componente funcionará.
+
 De fato, para trabalhar com estado em React, devemos abraçar o conceito de imutabilidade.
-Tipos primitivos como `number` ou `string` são inerentemente imutáveis (é impossível mudar seu conteúdo sem criar um novo valor).
+Tipos primitivos como `number` ou `string` são inerentemente imutáveis, pois é impossível mudar seu conteúdo sem criar um novo valor.
 Em contraste, objetos (e _arrays_) são mutáveis, mas **nunca devemos alterá-los**.
 Crie um novo objeto (ou _array_) com as alterações desejadas.
 
