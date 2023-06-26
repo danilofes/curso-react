@@ -24,14 +24,16 @@ Elementos React (ou seja, tags JSX) podem representar elementos HTML nativos ou 
 Usamos o componente `Hello` em JSX com sintaxe abaixo.
 
 ```tsx
-<Hello name="Danilo" />
+function App() {
+  return <Hello name="Danilo" />;
+}
 ```
 
-Como resultado, teremos os seguintes elementos no DOM:
+Como resultado, teremos os seguintes elementos na página (talvez você precise clicar em **Run this project** para visualizar):
 
-```html
-<div>Hello Danilo</div>
-```
+<iframe src="https://cralmg-react-hello.stackblitz.io/" style="border:4px solid #ddd; width:100%; height:100px"></iframe>
+
+Ou seja, o HTML resultante é `<div>Hello Danilo</div>`.
 
 #### Propriedades de elementos HTML
 
@@ -98,7 +100,7 @@ function EventHandling() {
 }
 ```
 
-É importante notar que nome da propriedade é sempre em _camel case_, seguindo o padrão `onXxx`, onde `Xxx` é um nome de evento.
+É importante notar que o nome da propriedade é sempre em _camel case_, seguindo o padrão `onXxx`, onde `Xxx` é um nome de evento.
 Ademais, o valor da propriedade deve ser uma função, que recebe como parâmetro um objeto de evento.
 
 :::info

@@ -130,7 +130,16 @@ package.json
 ```
 
 Tal diretório segue a estrutura de um projeto [Node.js](https://nodejs.org/): o arquivo `package.json` contém metadados do projeto e o diretório `node_module/` contém as dependências do projeto.
-Em `src/App.js` encontramos o componente principal da nossa aplicação.
+Em `src/App.js` encontramos o componente principal da nossa aplicação, cujo código é semelhante ao abaixo:
+
+```jsx
+function App() {
+  return <div className="App">detalhes omitidos...</div>;
+}
+
+export default App;
+```
+
 Já em `src/index.js`, tal componente é renderizado no documento `public/index.html`, usando um código semelhante ao abaixo:
 
 ```jsx
@@ -143,7 +152,7 @@ root.render(<App />);
 
 É interessante notar dois pontos:
 
-1. Podemos usar a sintaxe de `import` de ES6 para importar componentes ou definições de outros arquivos. Sendo assim, podemos organizar nosso código-fonte em vários arquivos e pastas, conforme desejarmos.
+1. Podemos usar a sintaxe de `import` de ES6 para importar componentes ou definições de outros arquivos (note que `src/index.js` importou o componente `App` de `src/App.js`). Podemos organizar nosso código-fonte em vários arquivos e pastas, conforme desejarmos.
 2. Podemos usar a sintaxe JSX para definir os componentes.
 
 :::info
@@ -224,6 +233,7 @@ Deve ser suficiente ler o [Tutorial de introdução](https://www.typescriptlang.
 Para conhecer mais profundamente os recursos, você pode ler o [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html).
 
 Daqui em diante, sempre que mostrarmos exemplos de código em React, assuma que estamos utilizando uma aplicação conforme criada pelo `create-react-app`, usando TypeScript e JSX.
+Portanto, quando mostrarmos o código de um componente React, você poderá testá-lo usando um projeto no padrão `create-react-app` e substituindo o componente definido no arquivo `src/App.tsx` pelo exemplo dado, garantindo que ele seja exportado como `export default`.
 
 ::: info
 **Nota:** Ao usar o `create-react-app`, ele usará sempre a versão mais recente do React e das ferramentas associadas.
