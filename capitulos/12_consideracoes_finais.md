@@ -11,4 +11,4 @@ Portanto, seguem algumas sugestões de bibliotecas interessantes:
 - [Immer](https://immerjs.github.io/immer/): Biblioteca para facilitar a manipulação de estruturas de dados imutáveis.
 - [React Query](https://react-query-v3.tanstack.com/): Biblioteca para carregamento e sincronização de dados.
 - [Jotai](https://jotai.org/) e [Recoil](https://recoiljs.org/): Bibliotecas para gerenciamento de estado.
-- [Formik](https://formik.org/): Biblioteca para manipulação e gestão de estado de formulários.
+- [React Hook Form](https://react-hook-form.com/) e [Formik](https://formik.org/): Bibliotecas para manipulação e gestão de estado de formulários.
