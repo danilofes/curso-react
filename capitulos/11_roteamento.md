@@ -172,6 +172,9 @@ function ContactDetail() {
 }
 ```
 
+Neste exemplo, com as URLs `http://localhost:3000/#/contacts/1` ou `http://localhost:3000/#/contacts/2` o componente `<ContactDetail />` será exibido.
+Ou seja, a mesma rota será ativada, mas o valor do parâmetro `contactId`, que é um segmento dinâmico da rota, será diferente.
+
 ### Criando links para rotas
 
 Para gerar links para uma rota, devemos usar o componente `Link` e especificar o caminho da rota.
