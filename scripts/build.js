@@ -51,6 +51,26 @@ async function run() {
     },
   });
 
+  md.use(require("markdown-it-container"), "fullcode", {
+    validate: function (params) {
+      return params.trim().match(/^fullcode\s+(.*)$/);
+    },
+
+    render: function (tokens, idx) {
+      var m = tokens[idx].info.trim().match(/^fullcode\s+(.*)$/);
+
+      if (tokens[idx].nesting === 1) {
+        // opening tag
+        return (
+          "<details style='margin: 1em 0'><summary><code>" + md.utils.escapeHtml(m[1]) + "</code></summary>\n"
+        );
+      } else {
+        // closing tag
+        return "</details>\n";
+      }
+    },
+  });
+
   fs.writeFileSync("index.html", template.start);
 
   const files = fs.readdirSync(baseDir);
