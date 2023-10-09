@@ -6,7 +6,7 @@ A mais popular delas é [React Router](https://reactrouter.com/), que vamos estu
 
 ### Adicionando React Router no projeto
 
-Como o projeto React é um projeto Node.js, a gestão de dependências pode ser feita via `npm`
+Como o projeto React é um projeto Node.js, a gestão de dependências pode ser feita via `npm`.
 Para adicionar a dependência para o React Router, execute em um terminal, no diretório do projeto:
 
 ```
@@ -284,11 +284,11 @@ Uma `action`, assim como um `loader`, pode retornar dados diretamente ou retorna
 **Dica:**
 Como `actions` e `loaders` podem retornar `Response`, temos a opção de retornar um redirecionamento para outra rota como resposta.
 Isso é particularmente comum em `actions`.
-Após postar um formulário de criação de um registro, podemos redirecionar para a rota de visualização do registro criado.
+Por exemplo, após postar um formulário de criação de um registro, podemos redirecionar para a rota de visualização do registro criado.
 Use a função `redirect` do React Router nos provê uma maneira fácil de criar um `Response` de redirecionamento.
 :::
 
-É importante ressaltar que, por padrão, após executar uma `action`, todos os `loaders` da rota atual e suas sub-rotas são recarregados.
+É importante ressaltar que, por padrão, após executar uma `action`, todos os `loaders` da rota e sub-rotas ativas são recarregados.
 Este comportamento, denominado de _revalidation_, é útil, pois actions tipicamente alteram dados e a interface poderia mostrar dados desatualizados se eles não fossem recarregados.
 Evidentemente, nem sempre é necessário recarregar todo `loader` ao executar qualquer `action`, mas podemos fazer um ajuste fino implementando a função `shouldRevalidate` na rota que define o `loader`.
 
@@ -300,7 +300,7 @@ Podemos fazer isso via _hook_ `useNavigation`.
 Esta função nos dá um objeto contendo, entre outras informações, a propriedade `state`, que pode ter os valores:
 
 - `idle`: nenhum carregamento pendente.
-- `loading`: uma ou mais `loaders` estão sendo executados.
+- `loading`: um ou mais `loaders` estão sendo executados.
 - `submitting`: uma `action` está sendo executada.
 
 Podemos utilizar `state === "loading"` para exibir condicionalmente um indicador de carregamento.
