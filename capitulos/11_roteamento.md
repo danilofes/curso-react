@@ -6,9 +6,8 @@ A mais popular delas é [React Router](https://reactrouter.com/), que vamos estu
 
 ### Adicionando React Router no projeto
 
-O projeto criado via `create-react-app` é um projeto Node.js.
-Sendo assim, a gestão de dependências do projeto, seja o React Router ou qualquer outra biblioteca adicional, pode ser feita via `npm`.
-Para adicionar a dependência para o projeto, execute em um terminal, no diretório do projeto:
+Como o projeto React é um projeto Node.js, a gestão de dependências pode ser feita via `npm`
+Para adicionar a dependência para o React Router, execute em um terminal, no diretório do projeto:
 
 ```
 npm install react-router-dom
@@ -18,7 +17,7 @@ Este comando instalará a versão mais recente.
 Se preferir instalar a versão exata utilizada no curso, mude o comando para:
 
 ```
-npm install react-router-dom@6.4
+npm install react-router-dom@6.16
 ```
 
 Após a execução deste comando, o pacote será adicionado como dependência no arquivo `package.json` do projeto e instalado no diretório `node_modules`.
@@ -235,18 +234,76 @@ No entanto, como o carregamento de dados ocorre de maneira assíncrona, a primei
 Isso muitas vezes é inconveniente e torna o código mais complicado, pois temos que tratar este caso excepcional.
 Ao usar o `loader`, o React Router aguarda o carregamento dos dados antes de renderizar o conteúdo da rota, evitando que nos preocupemos com este problema.
 
+### Modificando dados via Form e actions
+
+Além de carregar dados, o React Router oferece recursos para alteração de dados por meio da submissão de formulários para uma determinada rota.
+Neste caso, usamos o componente `Form` em conjunto com uma função especial, denominada `action`, definida na rota.
+No componente, acessamos os dados retornados pela `action` via _hook_ `useActionData`.
+Vejamos um exemplo.
+
+```tsx
+import { createHashRouter, Form, json, useActionData } from "react-router-dom";
+
+const router = createHashRouter([
+  {
+    path: "/rota-com-action",
+    element: <RotaComAction />,
+    action: async ({ request }) => {
+      // Podemos usar os dados submetidos no formulário
+      const formData = await request.formData();
+      // Lógica da action, tipicamente chamar alguma API
+      // Assim como no loader devemos retornar um valor ou um Response
+      return json({ msg: formData.get("msg") });
+    },
+  },
+]);
+
+function RotaComAction() {
+  const dados = useActionData() as { mensagem: string } | undefined;
+
+  return (
+    <Form method="POST">
+      <label>
+        Mensagem: <input name="msg" />
+      </label>
+      <button>Enviar</button>
+
+      {dados && <div>A mensagem enviada foi: {dados.msg}</div>}
+    </Form>
+  );
+}
+```
+
+O componente `Form`, por padrão, submete o formulário para a própria rota que está sendo exibida.
+No entanto, podemos passar uma outra rota via propriedade `action`.
+Após a submissão do formulário, o React Router chamará a função `action` associada à rota.
+Tal função pode ler os dados do formulário, executar as regras de negócio desejadas, chamar uma API, etc.
+Uma `action`, assim como um `loader`, pode retornar dados diretamente ou retornar `Promise<Response>`.
+
 :::info
-**Nota:**
-Além de carregar dados, o React Router oferece recursos para alteração de dados.
-Este conteúdo não será coberto neste curso, mas sugerimos ler o [Tutorial do React Router](https://reactrouter.com/en/main/start/tutorial) para conhecer todos os recursos disponíveis.
+**Dica:**
+Como `actions` e `loaders` podem retornar `Response`, temos a opção de retornar um redirecionamento para outra rota como resposta.
+Isso é particularmente comum em `actions`.
+Após postar um formulário de criação de um registro, podemos redirecionar para a rota de visualização do registro criado.
+Use a função `redirect` do React Router nos provê uma maneira fácil de criar um `Response` de redirecionamento.
 :::
+
+É importante ressaltar que, por padrão, após executar uma `action`, todos os `loaders` da rota atual e suas sub-rotas são recarregados.
+Este comportamento, denominado de _revalidation_, é útil, pois actions tipicamente alteram dados e a interface poderia mostrar dados desatualizados se eles não fossem recarregados.
+Evidentemente, nem sempre é necessário recarregar todo `loader` ao executar qualquer `action`, mas podemos fazer um ajuste fino implementando a função `shouldRevalidate` na rota que define o `loader`.
 
 ### Acessando a situação do carregamento
 
-Enquanto carregamos dados é desejável exibir um indicador de carregamento na interface, caso contrário o usuário pode imaginar que aplicação está travada.
-Quando o carregamento é feito via `loader`, podemos fazer isso via _hook_ `useNavigation`.
-Esta função nos dá um objeto contendo, entre outras informações, a propriedade `status`, que pode ter os valores `"idle" | "loading" | "submitting"`.
-Podemos utilizar este valor para exibir condicionalmente um indicador de carregamento.
+Enquanto carregamos ou submetemos dados (`loaders` e `actions`) a aplicação pode parecer não responsiva, pois o tempo de carregamento de chamadas remotas pode ser longo.
+É desejável portanto dar _feedback_ visual para estes casos na interface da aplicação, caso contrário o usuário pode imaginar que ela está travada.
+Podemos fazer isso via _hook_ `useNavigation`.
+Esta função nos dá um objeto contendo, entre outras informações, a propriedade `state`, que pode ter os valores:
+
+- `idle`: nenhum carregamento pendente.
+- `loading`: uma ou mais `loaders` estão sendo executados.
+- `submitting`: uma `action` está sendo executada.
+
+Podemos utilizar `state === "loading"` para exibir condicionalmente um indicador de carregamento.
 No entanto, é importante ter em mente que a rota só renderiza após o carregamento e portanto faz mais sentido exibir o indicador na rota raiz, que contém o layout principal.
 
 ```tsx
@@ -263,3 +320,61 @@ function RootRoute() {
   );
 }
 ```
+
+De forma análoga, podemos usar `state === "submitting"` para desabilitar o botão de submissão do formulário, impedindo que o usuário o envie novamente antes mesmo de terminar o envio em processamento.
+
+```tsx
+function MeuForm() {
+  const { state } = useNavigation();
+  return (
+    <Form method="POST">
+      <input name="campo1" />
+      <input name="campo2" />
+      {/* ... */}
+      <button disabled={state === "submitting"}>{state === "submitting" ? "Enviando..." : "Enviar"}</button>
+    </Form>
+  );
+}
+```
+
+### Tratamento de erros
+
+Ao definir uma rota, podemos especificar a propriedade `errorElement` para indicar o conteúdo a ser exibido quando um `loader` ou `action` lança um erro, ou mesmo quando ocorre erro durante a renderização do `element` da rota.
+Podemos usar o _hook_ `useRouteError` para obter o erro lançado.
+
+```tsx
+const router = createHashRouter([
+  {
+    path: "/",
+    element: <RotaComErro />,
+    errorElement: <TelaDeErro />,
+    loader: () => {
+      throw new Error("Erro no loader.");
+    },
+  },
+]);
+
+function RotaComErro() {
+  return <div>Não será exibido pois o loader lança erro</div>;
+}
+
+function TelaDeErro() {
+  const error = useRouteError();
+  return (
+    <div>
+      <p>Ocorreu um erro na aplicação.</p>
+      <p>{error?.message}</p>
+    </div>
+  );
+}
+```
+
+Se ocorrer erro em uma rota e ela não possuir `errorElement` definido, o React Router procurará a primeira rota acima dela na hierarquia que possui um `errorElement`.
+Assim podemos centralizar o tratamento de erros em um único local, se desejarmos.
+Em geral, é uma boa prática ter uma rota raiz na aplicação com um tratamento de erro comum e, se necessário, tratamento de erros mais granulares em rotas filhas.
+
+:::info
+**Nota:**
+Este capítulo aborda de maneira superficial o React Router.
+Sugerimos fortemente ler o [Tutorial do React Router](https://reactrouter.com/en/main/start/tutorial) para conhecer melhor os recursos disponíveis.
+:::

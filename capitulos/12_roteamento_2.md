@@ -1,5 +1,7 @@
 Neste capítulo vamos construir uma aplicação completa no estilo CRUD usando todos os recursos do React Router em conjunto.
 
+<iframe src="https://cralmg-contatos.stackblitz.io" style="border:4px solid #ddd; width:100%; height:300px; margin: 1rem 0"></iframe>
+
 :::fullcode index.css
 
 ```css
