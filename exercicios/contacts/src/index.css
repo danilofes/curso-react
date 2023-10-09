@@ -35,7 +35,8 @@ select {
   margin: 0;
 }
 
-nav, main {
+nav,
+main {
   padding: 1em;
 }
 

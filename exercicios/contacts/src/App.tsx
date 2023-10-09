@@ -5,6 +5,7 @@ import {
   Outlet,
   RouterProvider,
   createHashRouter,
+  isRouteErrorResponse,
   redirect,
   useActionData,
   useLoaderData,
@@ -12,21 +13,12 @@ import {
   useRouteError,
   useRouteLoaderData,
 } from "react-router-dom";
-import {
-  Contact,
-  ContactData,
-  ErrorData,
-  createContact,
-  deleteContact,
-  listContacts,
-  retrieveContact,
-  updateContact,
-} from "./fakeApi";
+import fakeApi, { Contact, ContactData, ErrorData } from "./fakeApi";
 
 const updateAction: ActionFunction = async ({ params: { contactId }, request }) => {
   const formData = await request.formData();
   const contactData: ContactData = Object.fromEntries(formData) as any;
-  const response = await updateContact(contactId!, contactData);
+  const response = await fakeApi.updateContact(contactId!, contactData);
   if (response.ok) {
     return redirect(`/${contactId!}`);
   } else {
@@ -37,7 +29,7 @@ const updateAction: ActionFunction = async ({ params: { contactId }, request }) 
 const createAction: ActionFunction = async ({ request }) => {
   const formData = await request.formData();
   const contactData: ContactData = Object.fromEntries(formData) as any;
-  const response = await createContact(contactData);
+  const response = await fakeApi.createContact(contactData);
   if (response.ok) {
     const newContact = await response.json();
     return redirect(`/${newContact.id}`);
@@ -47,7 +39,7 @@ const createAction: ActionFunction = async ({ request }) => {
 };
 
 const deleteAction: ActionFunction = async ({ params }) => {
-  const response = await deleteContact(params.contactId!);
+  const response = await fakeApi.deleteContact(params.contactId!);
   if (response.ok) {
     return redirect("/");
   } else {
@@ -58,15 +50,16 @@ const deleteAction: ActionFunction = async ({ params }) => {
 const router = createHashRouter([
   {
     path: "/",
+    id: "list",
     element: <Contacts />,
-    loader: () => listContacts(),
+    loader: () => fakeApi.listContacts(),
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Index /> },
       {
         path: ":contactId",
         id: "contact",
-        loader: ({ params: { contactId } }) => retrieveContact(contactId!),
+        loader: ({ params: { contactId } }) => fakeApi.retrieveContact(contactId!),
         children: [
           { index: true, element: <ShowContact /> },
           { path: "update", element: <UpdateContact />, action: updateAction },
@@ -77,6 +70,10 @@ const router = createHashRouter([
     ],
   },
 ]);
+
+export default function App() {
+  return <RouterProvider router={router} />;
+}
 
 function Contacts() {
   const { state } = useNavigation();
@@ -129,6 +126,7 @@ function ShowContact() {
 
 function CreateContact() {
   const { state } = useNavigation();
+  const error = useActionData() as ErrorData | undefined;
   return (
     <Form method="POST">
       <label>
@@ -143,7 +141,7 @@ function CreateContact() {
         </button>
         <Link to="/">Cancelar</Link>
       </div>
-      <ActionErrorMessage />
+      {error && <div className="error">{error.message}</div>}
     </Form>
   );
 }
@@ -151,6 +149,7 @@ function CreateContact() {
 function UpdateContact() {
   const { state } = useNavigation();
   const contact = useRouteLoaderData("contact") as Contact;
+  const error = useActionData() as ErrorData | undefined;
   return (
     <Form method="POST">
       <div>Id: {contact.id}</div>
@@ -166,35 +165,22 @@ function UpdateContact() {
         </button>
         <Link to={`/${contact.id}`}>Cancelar</Link>
       </div>
-      <ActionErrorMessage />
+      {error && <div className="error">{error.message}</div>}
     </Form>
   );
 }
 
 function ErrorPage() {
-  const error = useRouteError() as any;
+  const error = useRouteError();
   return (
     <div className="app">
       <main>
         <p>Ocorreu um erro na aplicação.</p>
-        <p>{error.data?.message || error.message}</p>
+        <p>{isRouteErrorResponse(error) ? error.data?.message : String(error)}</p>
         <p>
           <Link to="/">Voltar para página inicial</Link>
         </p>
       </main>
     </div>
   );
-}
-
-function ActionErrorMessage() {
-  const error = useActionData() as ErrorData | undefined;
-  if (error) {
-    return <div className="error">{error.message}</div>;
-  } else {
-    return null;
-  }
-}
-
-export default function App() {
-  return <RouterProvider router={router} />;
 }
