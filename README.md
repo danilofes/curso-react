@@ -1,4 +1,4 @@
-# Curso Programação em React - Versão 2022
+# Curso Programação em React - Versão 2023
 
 ## Ementa
 
@@ -12,3 +12,8 @@
 1. Otimização (memo, useMemo e useCallback)
 1. Context
 1. Roteamento (React Router)
+
+## Pendências para as próximas turmas
+
+- Migrar de create-react-app para Vite
+- Escrever capítulo 12 (criar CRUD)
